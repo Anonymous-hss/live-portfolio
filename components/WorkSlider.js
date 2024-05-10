@@ -38,9 +38,9 @@ const workSlides = {
           href: "https://github.com/Anonymous-hss/Ubtech",
         },
         {
-          title: "SimpleStorage SmartContract",
-          path: "/thumb7.png",
-          href: "https://github.com/Anonymous-hss/Blockchain-Project1-SimpleStorage",
+          title: "AR-VR Try-on",
+          path: "/thumb41.jpg",
+          href: "https://github.com/Anonymous-hss/AR-VR-TRY-ON",
         },
         {
           title: "FundMe Smartcontract",
