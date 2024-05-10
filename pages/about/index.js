@@ -122,7 +122,7 @@ const About = () => {
   const [index, setIndex] = useState(0);
   console.log(index);
   return (
-    <div className="h-full bg-primary/40 py-32 text-center xl:text-left">
+    <div className="h-screen bg-gradient-to-t from-gray-900 to-purple-900 via-black py-32 text-center xl:text-left overflow-auto">
       <Circles></Circles>
       <motion.div
         variants={fadeIn("right", 0.2)}

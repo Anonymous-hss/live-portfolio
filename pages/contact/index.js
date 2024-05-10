@@ -35,7 +35,7 @@ const Contact = () => {
     }
   }
   return (
-    <div className="h-full bg-primary/30">
+    <div className="h-full bg-gradient-to-t from-gray-900 to-purple-900 via-black">
       <div className="container mx-auto py-32 text-center xl:text-left flex items-center justify-center h-full">
         <div className="flex flex-col w-full max-w-[700px]">
           <motion.h2

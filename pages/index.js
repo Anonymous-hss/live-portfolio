@@ -10,8 +10,8 @@ import { fadeIn } from "../variants";
 const Home = () => {
   return (
     <div className="bg-primary/60 h-full">
-      <div className="m-full h-full bg-gradient-to-r from-primary/10 via-black/30 to-black/10">
-        <div className="text-center flex flex-col justify-center xl:pt-40 xl:text-left h-full container mx-auto">
+      <div className="m-full h-full bg-gradient-to-t from-gray-900 to-purple-900 via-black">
+        <div className="text-center flex flex-col justify-center xl:pt-40 xl:text-left pt-16 h-full container mx-auto">
           <motion.h2
             variants={fadeIn("down", 0.2)}
             initial="hidden"
