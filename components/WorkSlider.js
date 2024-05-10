@@ -23,11 +23,6 @@ const workSlides = {
           path: "/thumb31.jpg",
           href: "https://anonymous-hss.github.io/Portfolio-website/",
         },
-        {
-          title: "AR-VR Try-on",
-          path: "/thumb41.jpg",
-          href: "https://github.com/Anonymous-hss/AR-VR-TRY-ON",
-        },
       ],
     },
     {
