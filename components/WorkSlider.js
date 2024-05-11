@@ -9,6 +9,11 @@ const workSlides = {
           href: "https://github.com/Anonymous-hss/Ai-SaaS",
         },
         {
+          title: "Ai-SaaS",
+          path: "/thumb4.png",
+          href: "https://arlyn.us/",
+        },
+        {
           title: "Fashion Recommendation Engine",
           path: "/thumb1.png",
           href: "https://github.com/Anonymous-hss/Fashion-Recommendation-Engine-Updated",
@@ -18,15 +23,15 @@ const workSlides = {
           path: "/thumb2.png",
           href: "https://github.com/Anonymous-hss/Fashion-Recommendation-Chatbot",
         },
+      ],
+    },
+    {
+      images: [
         {
           title: "Designer Portfolio",
           path: "/thumb31.jpg",
           href: "https://anonymous-hss.github.io/Portfolio-website/",
         },
-      ],
-    },
-    {
-      images: [
         {
           title: "Amazon Clone",
           path: "/thumb5.png",
@@ -42,6 +47,10 @@ const workSlides = {
           path: "/thumb41.jpg",
           href: "https://github.com/Anonymous-hss/AR-VR-TRY-ON",
         },
+      ],
+    },
+    {
+      images: [
         {
           title: "FundMe Smartcontract",
           path: "/thumb8.png",

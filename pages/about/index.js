@@ -12,6 +12,9 @@ import {
   FaJava,
   FaGit,
   FaGithub,
+  FaBootstrap,
+  FaNodeJs,
+  FaPhp,
 } from "react-icons/fa";
 
 import {
@@ -28,6 +31,11 @@ import {
   SiMysql,
   SiKalilinux,
   SiLeaderprice,
+  SiJquery,
+  SiMongodb,
+  SiMongoose,
+  SiExpress,
+  SiPrisma,
 } from "react-icons/si";
 
 //  data
@@ -46,6 +54,21 @@ const aboutData = [
           <SiTailwindcss />,
           <SiPostman />,
           <SiMysql />,
+          <FaBootstrap />,
+        ],
+      },
+      {
+        title: "            ",
+        icons: [
+          <SiJquery />,
+          <SiMongodb />,
+          <SiMongoose />,
+          <SiExpress />,
+          <FaNodeJs />,
+          <SiMysql />,
+          <SiPrisma />,
+          <FaWordpress />,
+          <FaPhp />,
         ],
       },
       {
@@ -198,6 +221,14 @@ const About = () => {
                 </div>
                 <div className="text-xs uppercase tracking-[1px] leading-[1.4] max-w-[100px]">
                   Tech Events/Meetups
+                </div>
+              </div>
+              <div className="relative flex-1 ">
+                <div className="text-2xl xl:text-4xl font-extrabold text-accent mb-2">
+                  <CountUp start={0} end={5} duration={5}></CountUp>+
+                </div>
+                <div className="text-xs uppercase tracking-[1px] leading-[1.4] max-w-[100px]">
+                  Client Work
                 </div>
               </div>
             </div>
