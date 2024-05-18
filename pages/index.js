@@ -29,10 +29,11 @@ const Home = () => {
             exit="hidden"
             className="max-w-sm xl:max-w-xl mx-auto xl:mx-0 mb-10 xl:mb-16"
           >
-            Hey there! 👋 Welcome to my coding haven! As a tech enthusiast, my
-            portfolio is a glimpse into a world of projects, experiences, and
-            more. Dive into the code, explore my journey, and witness the
-            creativity and solutions that define my tech ventures.💡
+            Hey, welcome to my development playground! 👋 Here's where the magic
+            happens. Delve into my tech odyssey and witness a whirlwind of
+            projects, experiences, and more. From AI SaaS platforms to sleek web
+            designs, my portfolio is a kaleidoscope of creativity and
+            problem-solving prowess. 💻✨
           </motion.p>
           <div className="flex justify-center xl:hidden relative">
             <ProjectsBtn></ProjectsBtn>
