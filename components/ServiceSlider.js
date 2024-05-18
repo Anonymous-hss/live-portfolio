@@ -104,33 +104,32 @@ const serviceData = [
   {
     icon: <RxCrop />,
     title: "Lead",
-    description:
-      "Proven leader adept at steering teams, fostering collaboration.",
+    description: "Effective project and team leadership",
     link: "https://photos.app.goo.gl/p4334N94eRTqLEYAA",
   },
 
   {
     icon: <RxDesktop />,
     title: "Develop",
-    description: "Crafting seamless online solutions in development.",
+    description: "Advanced web and AI solutions.",
     link: "https://www.linkedin.com/posts/harshal-sawatkar_reactjs-firebase-ecommerce-activity-7095340787177037824-ItBr?utm_source=share&utm_medium=member_desktop",
   },
   {
     icon: <RxReader />,
     title: "Code",
-    description: "Precise coding for efficient, innovative digital solutions.",
+    description: "Proficient in multiple programming languages",
     link: "https://github.com/Anonymous-hss",
   },
   {
     icon: <RxPencil2 />,
     title: "Design",
-    description: "Web design proficiency for engaging digital experiences.",
+    description: " User-centric and responsive designs.",
     link: "https://anonymous-hss.github.io/Portfolio-website/",
   },
   {
     icon: <RxRocket />,
     title: "Problem Solving",
-    description: "Navigating challenges with effective, innovative solutions.",
+    description: "Innovative and practical solutions.",
     link: "https://www.hackerrank.com/profile/harshalsawatkar1",
   },
 ];

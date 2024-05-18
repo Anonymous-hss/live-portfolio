@@ -4,6 +4,7 @@ import Circles from "../../components/Circles";
 
 import { motion } from "framer-motion";
 import { fadeIn } from "../../variants";
+import Link from "next/link";
 
 const Work = () => {
   return (
@@ -28,10 +29,11 @@ const Work = () => {
               exit="hidden"
               className="mb-4 max-w-[400px] mx-auto lg:mx-0"
             >
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui
-              aliquid iusto nisi aspernatur et fugiat obcaecati maxime similique
-              praesentium. Architecto in molestias laboriosam voluptatum
-              voluptates quasi ab provident repellat ratione?
+              Some of my experience include AI, Web Development, and Blockchain,
+              solving real-world problems effectively. Developed an AI SaaS
+              platform and a Fashion Recommendation Engine. Created a live
+              user-friendly e-commerce website for
+              <Link href="https://arlyn.us/"> Arlyn Perfumes</Link>.
             </motion.p>
           </div>
           <motion.div
