@@ -60,7 +60,7 @@ const Testimonials = () => {
   React.useEffect(() => { setIsMounted(true); }, []);
 
   return (
-    <div className="h-[100dvh] bg-primary pt-32 pb-4 overflow-hidden relative z-10 w-full flex items-center">
+    <div className="min-h-[100dvh] bg-primary relative z-10 w-full overflow-x-hidden">
       {/* Animated Gold Aura Orb */}
       <motion.div
         animate={{
@@ -94,23 +94,23 @@ const Testimonials = () => {
 
       <Circles />
 
-      <div className="container mx-auto h-full relative z-10 flex flex-col justify-center">
-        <div className="flex flex-col h-[calc(100vh-160px)] mt-4 overflow-y-auto card-scroll pr-1">
-          
+      <div className="container mx-auto relative z-10 px-4 xl:px-0">
+        <div className="pt-20 xl:pt-32 pb-24 xl:pb-8">
+
           {/* ── Hero Section ── */}
           <motion.div
             variants={fadeIn("up", 0.2)}
             initial="hidden"
             animate="show"
             exit="hidden"
-            className="text-center mb-10 shrink-0"
+            className="text-center mb-8 xl:mb-10"
           >
             {/* Availability badge */}
             <motion.div
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ delay: 0.3, duration: 0.5 }}
-              className="inline-flex items-center gap-2 px-4 py-1.5 bg-accent/10 border border-accent/20 rounded-full mb-6"
+              className="inline-flex items-center gap-2 px-4 py-1.5 bg-accent/10 border border-accent/20 rounded-full mb-5"
             >
               <span className="w-2 h-2 bg-accent rounded-full animate-pulse" />
               <span className="text-[10px] font-mono uppercase tracking-[3px] text-accent/80">
@@ -128,7 +128,7 @@ const Testimonials = () => {
           </motion.div>
 
           {/* ── Value Proposition Cards ── */}
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 mb-8 shrink-0">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 mb-6 xl:mb-8">
             {valueCards.map((card, i) => (
               <motion.div
                 key={i}
@@ -148,7 +148,7 @@ const Testimonials = () => {
                   fillOpacity={0.35}
                   className="w-full group h-full"
                 >
-                  <div className="p-6 flex flex-col gap-4 h-full">
+                  <div className="p-5 xl:p-6 flex flex-col gap-4 h-full">
                     {/* Badge */}
                     <div className="flex items-center justify-between">
                       <span className="px-2.5 py-1 bg-white/[0.04] border border-white/[0.07] rounded text-[9px] font-mono text-white/40 uppercase tracking-wide">
@@ -160,7 +160,7 @@ const Testimonials = () => {
                     </div>
 
                     {/* Title */}
-                    <h3 className="text-xl font-bold text-white group-hover:text-accent transition-colors duration-300">
+                    <h3 className="text-lg xl:text-xl font-bold text-white group-hover:text-accent transition-colors duration-300">
                       {card.title}
                     </h3>
 
@@ -182,12 +182,12 @@ const Testimonials = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.7, duration: 0.5 }}
-            className="bg-white/[0.03] backdrop-blur-lg border border-white/[0.07] rounded-2xl p-6 mb-8 shrink-0"
+            className="bg-white/[0.03] backdrop-blur-lg border border-white/[0.07] rounded-2xl p-5 xl:p-6 mb-6 xl:mb-8"
           >
-            <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
+            <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 xl:gap-6">
               {stats.map((s, i) => (
                 <div key={i} className="text-center">
-                  <div className="text-3xl xl:text-4xl font-extrabold text-accent drop-shadow-[0_0_20px_rgba(241,48,36,0.4)]">
+                  <div className="text-2xl xl:text-4xl font-extrabold text-accent drop-shadow-[0_0_20px_rgba(241,48,36,0.4)]">
                     {isMounted && <CountUp start={0} end={s.value} duration={3} delay={0.5} />}
                     {s.suffix}
                   </div>
@@ -204,12 +204,12 @@ const Testimonials = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.9, duration: 0.5 }}
-            className="flex flex-col gap-2 items-center shrink-0 pb-4"
+            className="flex flex-col gap-2 items-center pb-2"
           >
             {highlights.map((line, i) => (
               <div
                 key={i}
-                className="text-[10px] font-mono text-white/20 uppercase tracking-[4px]"
+                className="text-[9px] xl:text-[10px] font-mono text-white/20 uppercase tracking-[3px] xl:tracking-[4px] text-center"
               >
                 {line}
               </div>

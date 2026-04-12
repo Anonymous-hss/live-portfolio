@@ -23,14 +23,14 @@ const pressStart = Press_Start_2P({
 
 const Home = () => {
   return (
-    <div className="bg-black h-full relative overflow-hidden">
+    <div className="bg-black min-h-[100dvh] xl:h-full relative overflow-hidden">
       {/* Particles Layer */}
       <div className="absolute inset-0 z-0">
         <ParticlesContainer />
       </div>
 
-      <div className="w-full h-full bg-transparent relative overflow-y-auto overflow-x-hidden z-20">
-        <div className="text-center flex flex-col justify-center lg:pt-40 lg:text-left pt-36 pb-24 h-max lg:h-full container mx-auto">
+      <div className="w-full min-h-[100dvh] xl:h-full bg-transparent relative overflow-y-auto overflow-x-hidden z-20">
+        <div className="text-center flex flex-col justify-center lg:pt-40 lg:text-left pt-24 pb-28 lg:pb-4 h-max lg:h-full container mx-auto">
           <motion.h2
             variants={fadeIn("down", 0.2)}
             initial="hidden"

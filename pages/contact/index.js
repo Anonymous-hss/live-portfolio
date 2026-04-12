@@ -79,7 +79,7 @@ const Contact = () => {
   }
 
   return (
-    <div className="h-[100dvh] bg-primary pt-32 pb-4 overflow-hidden relative z-10 w-full flex items-center">
+    <div className="min-h-[100dvh] bg-primary relative z-10 w-full overflow-x-hidden">
       {/* Animated Crimson Aura Orb */}
       <motion.div
         animate={{
@@ -103,8 +103,9 @@ const Contact = () => {
 
       <Circles />
 
-      <div className="container mx-auto h-full relative z-10 flex items-center justify-center">
-        <div className="w-full max-w-5xl">
+      <div className="container mx-auto relative z-10 px-4 xl:px-0">
+        <div className="pt-20 xl:pt-32 pb-24 xl:pb-8 flex items-start xl:items-center justify-center">
+          <div className="w-full max-w-5xl">
           {/* ── Header ── */}
           <motion.div
             variants={fadeIn("up", 0.2)}
@@ -330,6 +331,7 @@ const Contact = () => {
                 )}
               </div>
             </motion.div>
+          </div>
           </div>
         </div>
       </div>
