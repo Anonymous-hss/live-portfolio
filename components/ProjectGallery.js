@@ -101,8 +101,8 @@ const ProjectGallery = () => {
                             <Image
                               src={img}
                               alt={`${project.title} ${idx + 1}`}
-                              layout="fill"
-                              objectFit="cover"
+                              fill
+                              style={{ objectFit: 'cover' }}
                               className="transition-transform duration-500 group-hover/img:scale-110"
                             />
                           </div>
@@ -114,8 +114,8 @@ const ProjectGallery = () => {
                           <Image
                             src={project.image[0]}
                             alt={project.title}
-                            layout="fill"
-                            objectFit="cover"
+                            fill
+                            style={{ objectFit: 'cover' }}
                             className="rounded-xl shadow-2xl border border-white/10"
                           />
                         </div>
@@ -123,8 +123,8 @@ const ProjectGallery = () => {
                           <Image
                             src={project.image[1]}
                             alt={project.title}
-                            layout="fill"
-                            objectFit="cover"
+                            fill
+                            style={{ objectFit: 'cover' }}
                             className="rounded-xl shadow-2xl border border-white/10"
                           />
                         </div>
@@ -134,8 +134,8 @@ const ProjectGallery = () => {
                     <Image
                       src={project.image}
                       alt={project.title}
-                      layout="fill"
-                      objectFit={project.objectFit || "cover"}
+                      fill
+                      style={{ objectFit: project.objectFit || "cover" }}
                       className={`transition-transform duration-700 ${project.objectFit === "contain" ? "p-8" : "group-hover:scale-110"}`}
                     />
                   )}

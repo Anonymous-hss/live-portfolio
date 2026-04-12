@@ -191,7 +191,7 @@ const About = () => {
                       transition={{ delay: i * 0.08, duration: 0.4 }}
                     >
                       <div className="text-accent font-mono text-xs uppercase tracking-[3px] mb-3">
-                        // {cat.category}
+                        {"//"} {cat.category}
                       </div>
                       <div className="flex flex-wrap gap-2">
                         {cat.items.map((item, j) => (
