@@ -58,7 +58,7 @@ const aboutData = [
         ],
       },
       {
-        title: "            ",
+        title: "",
         icons: [
           <SiJquery />,
           <SiMongodb />,
@@ -143,6 +143,12 @@ import CountUp from "react-countup";
 
 const About = () => {
   const [index, setIndex] = useState(0);
+  const [isMounted, setIsMounted] = useState(false);
+
+  React.useEffect(() => {
+    setIsMounted(true);
+  }, []);
+
   console.log(index);
   return (
     <div className="h-screen bg-gradient-to-t from-gray-900 to-purple-900 via-black py-32 text-center xl:text-left overflow-auto">
@@ -208,7 +214,7 @@ const About = () => {
                */}
               <div className="relative flex-1 after:w-[1px] after:h-full after:bg-white/10 after:absolute after:top-0 after:right-0">
                 <div className="text-2xl xl:text-4xl font-extrabold text-accent mb-2">
-                  <CountUp start={0} end={15} duration={5}></CountUp>+
+                  {isMounted && <CountUp start={0} end={15} duration={5}></CountUp>}+
                 </div>
                 <div className="text-xs uppercase tracking-[1px] leading-[1.4] max-w-[100px]">
                   Finished projects
@@ -217,7 +223,7 @@ const About = () => {
               {/* awards */}
               <div className="relative flex-1 ">
                 <div className="text-2xl xl:text-4xl font-extrabold text-accent mb-2">
-                  <CountUp start={0} end={20} duration={5}></CountUp>+
+                  {isMounted && <CountUp start={0} end={20} duration={5}></CountUp>}+
                 </div>
                 <div className="text-xs uppercase tracking-[1px] leading-[1.4] max-w-[100px]">
                   Tech Events/Meetups
@@ -225,7 +231,7 @@ const About = () => {
               </div>
               <div className="relative flex-1 ">
                 <div className="text-2xl xl:text-4xl font-extrabold text-accent mb-2">
-                  <CountUp start={0} end={5} duration={5}></CountUp>+
+                  {isMounted && <CountUp start={0} end={5} duration={5}></CountUp>}+
                 </div>
                 <div className="text-xs uppercase tracking-[1px] leading-[1.4] max-w-[100px]">
                   Client Work
