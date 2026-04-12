@@ -1,19 +1,35 @@
-import { Particles } from "react-tsparticles";
+import Particles, { initParticlesEngine } from "@tsparticles/react";
 import { loadFull } from "tsparticles";
-import React, { useCallback } from "react";
+import React, { useCallback, useEffect, useState } from "react";
 
 const ParticlesContainer = () => {
-  const particlesInit = useCallback(async (engine) => {
-    await loadFull(engine);
+  const [init, setInit] = useState(false);
+
+  // this should be run only once per application lifetime
+  useEffect(() => {
+    initParticlesEngine(async (engine) => {
+      // you can initiate the tsParticles instance (engine) here, adding custom shapes or presets
+      // this loads the tsparticles package bundle, it's the easiest method for getting everything ready
+      // starting from v2 you can add only the features you need reducing the bundle size
+      await loadFull(engine);
+    }).then(() => {
+      setInit(true);
+    });
   }, []);
 
-  const particlesLoaded = useCallback(async () => {}, []);
+  const particlesLoaded = useCallback(async (container) => {
+    // console.log(container);
+  }, []);
+
+  if (!init) {
+    return null;
+  }
+
   return (
     <Particles
-      className="w-full h-full absolute translate-z-0"
+      className="w-full h-full absolute inset-0 translate-z-0"
       id="tsparticles"
-      init={particlesInit}
-      loaded={particlesLoaded}
+      particlesLoaded={particlesLoaded}
       options={{
         fullScreen: { enable: false },
         background: {
@@ -47,13 +63,13 @@ const ParticlesContainer = () => {
         },
         particles: {
           color: {
-            value: "#e68e2e",
+            value: "#ffffff",
           },
           links: {
-            color: "#f5d393",
+            color: "#f13024",
             distance: 150,
             enable: true,
-            opacity: 0.5,
+            opacity: 0.25,
             width: 1,
           },
           collisions: {
@@ -65,8 +81,8 @@ const ParticlesContainer = () => {
             outMode: {
               default: "bounce",
             },
-            random: false,
-            speed: 1,
+            random: true,
+            speed: 0.5,
             straight: false,
           },
           number: {
@@ -74,10 +90,10 @@ const ParticlesContainer = () => {
               enable: true,
               area: 800,
             },
-            value: 80,
+            value: 120,
           },
           opacity: {
-            value: 0.5,
+            value: { min: 0.1, max: 0.7 },
           },
           shape: {
             type: "circle",
@@ -85,13 +101,13 @@ const ParticlesContainer = () => {
           size: {
             value: {
               min: 1,
-              max: 5,
+              max: 3,
             },
           },
         },
         detectRetina: true,
       }}
-    ></Particles>
+    />
   );
 };
 
