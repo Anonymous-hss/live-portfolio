@@ -23,10 +23,14 @@ const pressStart = Press_Start_2P({
 
 const Home = () => {
   return (
-    <div className="bg-primary/60 h-full">
-      <div className="m-full h-full bg-gradient-to-t from-gray-900 to-purple-900 via-black relative overflow-y-auto overflow-x-hidden">
+    <div className="bg-black h-full relative overflow-hidden">
+      {/* Particles Layer */}
+      <div className="absolute inset-0 z-0">
         <ParticlesContainer />
-        <div className="text-center flex flex-col justify-center xl:pt-40 xl:text-left pt-36 pb-24 h-max xl:h-full container mx-auto">
+      </div>
+
+      <div className="w-full h-full bg-transparent relative overflow-y-auto overflow-x-hidden z-20">
+        <div className="text-center flex flex-col justify-center lg:pt-40 lg:text-left pt-36 pb-24 h-max lg:h-full container mx-auto">
           <motion.h2
             variants={fadeIn("down", 0.2)}
             initial="hidden"
@@ -72,22 +76,22 @@ const Home = () => {
             initial="hidden"
             animate="show"
             exit="hidden"
-            className="max-w-sm xl:max-w-xl mx-auto xl:mx-0 mb-10 xl:mb-16"
+            className="max-w-sm md:max-w-2xl lg:max-w-xl mx-auto lg:mx-0 mb-10 lg:mb-16 text-sm sm:text-base leading-relaxed"
           >
             I don’t just build projects, I design and ship products that scale, perform, and create real impact.
 
-            With <ShinyText speed={1} spread={120} color="#b5b5b5" shineColor="#f13024" className="font-semibold text-white">2+ years of experience</ShinyText>, I’ve worked across <ShinyText speed={2} spread={100} color="#b5b5b5" shineColor="#f13024" className="font-semibold text-white">MERN, Next.js, Go, and modern AI stacks</ShinyText> to build production-grade systems end-to-end.
+            With <ShinyText speed={2} spread={100} color="#94a3b8" shineColor="#ffffff" className="font-semibold">2+ years of experience</ShinyText>, I’ve worked across <ShinyText speed={2} spread={100} color="#94a3b8" shineColor="#ffffff" className="font-semibold">MERN, Next.js, Go, and modern AI stacks</ShinyText> to build production-grade systems end-to-end.
 
             From scaling CRMs handling
-            <ShinyText speed={2} spread={110} color="#b5b5b5" shineColor="#f13024" className="font-semibold text-white">10,000+ leads/month across multi-branch operations</ShinyText>,
-            to developing real-time architectures using <ShinyText speed={2} spread={90} color="#b5b5b5" shineColor="#f13024" className="font-semibold text-white">WebSockets, Redis, and microservices</ShinyText>,
+            <ShinyText speed={2} spread={110} color="#94a3b8" shineColor="#ffffff" className="font-semibold">10,000+ leads/month across multi-branch operations</ShinyText>,
+            to developing real-time architectures using <ShinyText speed={2} spread={90} color="#94a3b8" shineColor="#ffffff" className="font-semibold">WebSockets, Redis, and microservices</ShinyText>,
             I focus on performance, reliability, and clean system design.
 
-            I’ve built SEO-driven platforms, high-conversion landing pages, and AI-powered products leveraging <ShinyText speed={2} spread={100} color="#b5b5b5" shineColor="#f13024" className="font-semibold text-white">RAG, LangChain, and LLM integrations</ShinyText> always owning everything from backend architecture to deployment pipelines.
+            I’ve built SEO-driven platforms, high-conversion landing pages, and AI-powered products leveraging <ShinyText speed={2} spread={100} color="#94a3b8" shineColor="#ffffff" className="font-semibold">RAG, LangChain, and LLM integrations</ShinyText> always owning everything from backend architecture to deployment pipelines.
 
-            Driven by curiosity and a product-first mindset, my goal is simple <ShinyText speed={2} spread={130} color="#b5b5b5" shineColor="#f13024" className="font-semibold text-white">build things that don’t just work, but stand out.</ShinyText>
+            Driven by curiosity and a product-first mindset, my goal is simple <ShinyText speed={2} spread={130} color="#94a3b8" shineColor="#ffffff" className="font-semibold">build things that don’t just work, but stand out.</ShinyText>
           </motion.p>
-          <div className="flex flex-col sm:flex-row items-center justify-center xl:hidden relative gap-y-4 gap-x-4 mt-8">
+          <div className="flex flex-col sm:flex-row items-center justify-center lg:hidden relative gap-y-4 gap-x-4 mt-8">
             <ProjectsBtn></ProjectsBtn>
             <Link
               href="/contact"
@@ -104,7 +108,7 @@ const Home = () => {
             initial="hidden"
             animate="show"
             exit="hidden"
-            className="hidden xl:flex items-center gap-x-8"
+            className="hidden lg:flex items-center gap-x-8"
           >
             <ProjectsBtn></ProjectsBtn>
             <Link
@@ -119,8 +123,9 @@ const Home = () => {
           </motion.div>
         </div>
       </div>
-      <div className="w-[1200px] h-full absolute right-0 bottom-0">
-        <div className="bg-none xl:bg-explosion xl:bg-cover xl:bg-right xl:bg-no-repeat w-full h-full absolute mix-blend-color-dodge translate-z-0"></div>
+      <div className="w-[1200px] h-full absolute right-0 bottom-0 pointer-events-none z-10">
+        {/* Deep Space Focal Glow */}
+        <div className="w-[80vw] h-[80vw] max-w-[800px] max-h-[800px] absolute bottom-[-10%] right-[-10%] bg-[radial-gradient(circle,_var(--tw-gradient-stops))] from-accent/30 via-accent/5 to-transparent blur-[120px] rounded-full mix-blend-screen opacity-70"></div>
         <motion.div
           variants={fadeIn("up", 0.5)}
           initial="hidden"

@@ -12,8 +12,8 @@ import {
 export const navData = [
   { name: "home", path: "/", icon: <HiHome /> },
   { name: "about", path: "/about", icon: <HiUser /> },
-  { name: "services", path: "/services", icon: <HiRectangleGroup /> },
-  { name: "work", path: "/work", icon: <HiViewColumns /> },
+  { name: "projects", path: "/projects", icon: <HiViewColumns /> },
+  { name: "qualities", path: "/qualities", icon: <HiRectangleGroup /> },
   {
     name: "HireMe?",
     path: "/testimonials",
@@ -34,30 +34,43 @@ const Nav = () => {
   const router = useRouter();
   const pathname = router.pathname;
   return (
-    <nav className="flex flex-col items-center xl:justify-center gap-y-4 fixed h-max bottom-0 mt-auto xl:right-[2%] z-50 top-0 w-full xl:w-16 xl:max-w-md xl:h-screen">
-      <div className="flex w-full xl:flex-col items-center justify-between xl:justify-center gap-y-10 px-4 md:px-40 xl:px-0 h-[80px] xl:h-max py-8 bg-white/10 backdrop-blur-sm text-3xl xl:text-xl xl:rounded-full">
-        {navData.map((link, index) => {
-          return (
-            <Link
-              className={`${
-                link.path === pathname && "text-accent"
-              } relative flex items-center group hover:text-accent transition-all duration-300`}
-              href={link.path}
-              key={index}
-              data-cursor="hover"
-            >
-              <div className="absolute pr-14 right-0 hidden xl:group-hover:flex">
-                <div className="bg-white relative flex text-primary items-center p-[6px] rounded-[3px]">
-                  <div className="text-[12px] leading-none font-semibold capitalize">
+    <nav className="flex flex-col items-center xl:justify-center gap-y-4 fixed h-max bottom-0 mt-auto xl:right-[2%] z-50 top-0 w-full xl:w-16 xl:max-w-md xl:h-screen pointer-events-none">
+      {/* Outer Wrapper: Shadow and Shape */}
+      <div className="w-full h-[80px] xl:h-max xl:rounded-full pointer-events-auto xl:shadow-[0_0_20px_rgba(0,0,0,0.5)] relative">
+        
+        {/* Layer 1: Animated Border (Clipped) */}
+        <div className="nav-border-container xl:rounded-full">
+           <div className="w-full h-full nav-border-glow" />
+        </div>
+
+        {/* Layer 2: Interior Content (Unclipped) */}
+        <div className="flex w-full h-full xl:flex-col items-center justify-between xl:justify-center gap-y-10 px-4 md:px-40 xl:px-0 xl:py-8 nav-glass-interior text-3xl xl:text-xl xl:rounded-full overflow-visible relative">
+          {navData.map((link, index) => {
+            const isActive = link.path === pathname;
+            return (
+              <Link
+                href={link.path}
+                key={index}
+                className={`${
+                  isActive ? "text-accent drop-shadow-[0_0_8px_rgba(241,48,36,0.6)]" : "text-slate-400"
+                } group relative flex items-center justify-center w-[50px] h-[50px]`}
+                data-cursor="hover"
+              >
+                {/* Desktop Dynamic Expansion Pill */}
+                <div className="hidden xl:flex absolute right-0 items-center justify-end h-full w-full rounded-full group-hover:w-[140px] bg-transparent group-hover:bg-white/10 transition-all duration-300 ease-out overflow-hidden group-hover:drop-shadow-[0_0_8px_rgba(255,255,255,0.4)] z-0">
+                  <span className="whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity duration-300 mr-[56px] text-[13px] font-semibold text-white capitalize tracking-wide">
                     {link.name}
-                  </div>
-                  <div className="border-solid border-l-white border-l-8 border-y-transparent border-y-[6px] border-r-0 absolute -right-2"></div>
+                  </span>
                 </div>
-              </div>
-              <div>{link.icon}</div>
-            </Link>
-          );
-        })}
+
+                {/* Foreground Icon */}
+                <div className="relative z-10 transition-all duration-300 group-hover:text-white flex items-center justify-center">
+                  {link.icon}
+                </div>
+              </Link>
+            );
+          })}
+        </div>
       </div>
     </nav>
   );

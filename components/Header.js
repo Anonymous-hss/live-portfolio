@@ -5,8 +5,8 @@ import Socials from "../components/Socials";
 
 const Header = () => {
   return (
-    <header className="absolute z-30 w-full flex items-center px-16 xl:px-0 xl:h[90px] min-h-[140px] ">
-      <div className="container mx-auto">
+    <header className="absolute z-30 w-full flex items-center px-16 xl:px-0 xl:h[90px] min-h-[140px] pointer-events-none">
+      <div className="container mx-auto pointer-events-auto">
         <div className="flex flex-col lg:flex-row justify-between items-center gap-y-2 py-1">
           <Link href={"/"}>
             <h1 className="text-3xl font-bold tracking-tight select-none">
