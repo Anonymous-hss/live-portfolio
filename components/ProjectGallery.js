@@ -66,7 +66,7 @@ const ProjectGallery = () => {
         initial={{ opacity: 0, y: 8 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.25, ease: "easeOut" }}
-        className="grid grid-cols-1 lg:grid-cols-2 gap-4 overflow-y-auto flex-1 pr-1 card-scroll pb-2 items-start"
+        className="grid grid-cols-1 lg:grid-cols-2 gap-4 xl:overflow-y-auto xl:flex-1 xl:pr-1 xl:card-scroll pb-2 items-start"
       >
         {filteredProjects.map((project, i) => {
           const { glowColor, colors } = getGlow(project.category);

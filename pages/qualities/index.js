@@ -81,7 +81,7 @@ const Qualities = () => {
   React.useEffect(() => { setIsMounted(true); }, []);
 
   return (
-    <div className="h-[100dvh] bg-primary pt-32 pb-4 text-center xl:text-left overflow-hidden relative z-10 w-full flex items-center">
+    <div className="min-h-[100dvh] bg-primary text-center xl:text-left relative z-10 w-full overflow-x-hidden">
       {/* Animated Teal Aura Orb */}
       <motion.div
         animate={{
@@ -105,10 +105,11 @@ const Qualities = () => {
 
       <Circles />
 
-      <div className="container mx-auto h-full relative z-10">
-        <div className="flex flex-col xl:flex-row gap-x-12 w-full h-[calc(100vh-160px)] mt-4">
+      <div className="container mx-auto relative z-10 px-4 xl:px-0">
+        <div className="flex flex-col xl:flex-row gap-x-12 w-full pt-20 xl:pt-32 pb-24 xl:pb-4 xl:h-[100dvh]">
+
           {/* ── Left Panel ── */}
-          <div className="text-center flex xl:w-[18vw] flex-col lg:text-left mb-6 xl:mb-0 shrink-0">
+          <div className="text-center flex xl:w-[18vw] flex-col xl:text-left mb-6 xl:mb-0 shrink-0">
             <motion.h2
               variants={fadeIn("up", 0.3)}
               initial="hidden"
@@ -123,20 +124,20 @@ const Qualities = () => {
               initial="hidden"
               animate="show"
               exit="hidden"
-              className="mb-6 max-w-[400px] mx-auto lg:mx-0 text-white/60 leading-relaxed text-sm"
+              className="mb-6 max-w-[400px] mx-auto xl:mx-0 text-white/60 leading-relaxed text-sm"
             >
               A robust blend of technical excellence, leadership, and
               proactive problem-solving. I own the entire journey — from
               architecture to deployment.
             </motion.p>
 
-            {/* Stats */}
+            {/* Stats — desktop only sidebar, shown inline on mobile */}
             <motion.div
               variants={fadeIn("up", 0.5)}
               initial="hidden"
               animate="show"
               exit="hidden"
-              className="hidden xl:grid grid-cols-2 gap-4"
+              className="grid grid-cols-2 xl:grid-cols-2 gap-4 mb-6 xl:mb-0"
             >
               {stats.map((s, i) => (
                 <div key={i} className="text-left">
@@ -158,7 +159,7 @@ const Qualities = () => {
             initial="hidden"
             animate="show"
             exit="hidden"
-            className="w-full flex-grow overflow-y-auto card-scroll pr-1 pb-2"
+            className="w-full flex-grow xl:overflow-y-auto xl:card-scroll xl:mt-4 pr-0 xl:pr-1 pb-2"
           >
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 items-start">
               {qualityData.map((q, i) => (
@@ -181,17 +182,17 @@ const Qualities = () => {
                     fillOpacity={0.35}
                     className="w-full group"
                   >
-                    <div className="p-6 flex flex-col gap-3">
+                    <div className="p-5 xl:p-6 flex flex-col gap-3">
                       {/* Icon + Title row */}
                       <div className="flex items-center gap-3">
                         <div className="text-2xl text-accent">{q.icon}</div>
-                        <h3 className="text-lg font-bold text-white group-hover:text-accent transition-colors duration-300">
+                        <h3 className="text-base xl:text-lg font-bold text-white group-hover:text-accent transition-colors duration-300">
                           {q.title}
                         </h3>
                       </div>
 
                       {/* Description */}
-                      <p className="text-white/50 text-[12px] leading-relaxed">
+                      <p className="text-white/50 text-[12px] leading-relaxed text-left">
                         {q.description}
                       </p>
 

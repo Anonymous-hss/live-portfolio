@@ -85,7 +85,7 @@ const About = () => {
   React.useEffect(() => { setIsMounted(true); }, []);
 
   return (
-    <div className="h-[100dvh] bg-primary overflow-hidden relative z-10 w-full">
+    <div className="min-h-[100dvh] bg-primary relative z-10 w-full overflow-x-hidden">
 
       {/* — Background aura — */}
       <motion.div
@@ -102,16 +102,16 @@ const About = () => {
       <Circles />
 
       {/* ═══ Main shell ═══════════════════════════════════════════════════════ */}
-      <div className="flex h-full w-full">
+      <div className="flex w-full xl:h-screen">
 
-        {/* ── LEFT SIDEBAR (30%) ───────────────────────────────────────────── */}
+        {/* ── LEFT SIDEBAR (30%) — desktop only ─────────────────────────────── */}
         <motion.aside
           variants={fadeIn("right", 0.15)}
           initial="hidden"
           animate="show"
-          className="hidden xl:flex flex-col w-[30%] h-full relative border-r border-white/10 pt-28 pb-0 px-8"
+          className="hidden xl:flex flex-col w-[30%] h-screen sticky top-0 relative border-r border-white/10 pt-24 pb-0 px-8"
         >
-          {/* Nav menu — at the top below navbar */}
+          {/* Nav menu */}
           <nav className="relative z-10 flex flex-col gap-y-2 pt-4">
             {NAV.map((item) => {
               const isActive = activeTab === item.id;
@@ -125,7 +125,6 @@ const About = () => {
                       : "text-white/40 hover:text-white/70 hover:bg-white/5 border border-transparent"
                     }`}
                 >
-                  {/* Active accent bar */}
                   {isActive && (
                     <motion.div
                       layoutId="activeBar"
@@ -138,7 +137,7 @@ const About = () => {
             })}
           </nav>
 
-          {/* Avatar — decorative, pinned to bottom of sidebar */}
+          {/* Avatar decorative */}
           <div className="absolute bottom-0 left-0 right-0 flex justify-center pointer-events-none z-0 mix-blend-lighten overflow-hidden">
             <div className="scale-[0.72] origin-bottom opacity-90">
               <Avatar />
@@ -146,25 +145,26 @@ const About = () => {
           </div>
         </motion.aside>
 
-        {/* ── RIGHT CONTENT PANE (70%) ─────────────────────────────────────── */}
-        <div className="flex-1 h-full pt-28 pb-8 pr-6 xl:pr-12 pl-6 xl:pl-10 overflow-hidden">
+        {/* ── RIGHT CONTENT PANE ────────────────────────────────────────────── */}
+        {/* Desktop: full-height fixed. Mobile: scrollable with top/bottom padding for header+nav */}
+        <div className="flex-1 pt-20 xl:pt-24 pb-28 xl:pb-8 px-5 xl:pr-12 xl:pl-10 xl:h-screen xl:overflow-hidden">
           <AnimatePresence mode="wait">
             {/* ── BIO ── */}
             {activeTab === "bio" && (
               <motion.div key="bio" variants={paneVariants} initial="initial" animate="animate" exit="exit"
-                className="h-full flex flex-col justify-center max-w-3xl"
+                className="flex flex-col justify-start xl:justify-center xl:h-full max-w-3xl"
               >
-                <h2 className="text-4xl xl:text-6xl font-semibold mb-6">
+                <h2 className="text-3xl xl:text-6xl font-semibold mb-6">
                   Who am I<span className="text-accent">?</span>
                 </h2>
-                <p className="text-white/70 leading-[1.9] text-base xl:text-lg mb-10 max-w-2xl">
+                <p className="text-white/70 leading-[1.9] text-sm xl:text-lg mb-10 max-w-2xl">
                   {aboutData.bio.bio}
                 </p>
                 {/* Stats */}
-                <div className="flex gap-x-12 pt-8 border-t border-white/10">
+                <div className="flex gap-x-8 xl:gap-x-12 pt-8 border-t border-white/10">
                   {aboutData.bio.stats.map((s, i) => (
                     <div key={i}>
-                      <div className="text-4xl xl:text-5xl font-extrabold text-accent drop-shadow-[0_0_20px_rgba(241,48,36,0.4)]">
+                      <div className="text-3xl xl:text-5xl font-extrabold text-accent drop-shadow-[0_0_20px_rgba(241,48,36,0.4)]">
                         {isMounted && <CountUp start={0} end={s.value} duration={4} />}+
                       </div>
                       <div className="text-xs uppercase tracking-[3px] text-white/40 mt-2">{s.label}</div>
@@ -177,9 +177,9 @@ const About = () => {
             {/* ── SKILLS ── */}
             {activeTab === "skills" && (
               <motion.div key="skills" variants={paneVariants} initial="initial" animate="animate" exit="exit"
-                className="h-full flex flex-col overflow-y-auto card-scroll"
+                className="flex flex-col xl:h-full xl:overflow-y-auto card-scroll"
               >
-                <h2 className="text-3xl xl:text-5xl font-semibold mb-8 shrink-0">
+                <h2 className="text-2xl xl:text-5xl font-semibold mb-8 shrink-0">
                   Tech <span className="text-accent">Stack</span>
                 </h2>
                 <div className="flex flex-col gap-y-8">
@@ -198,7 +198,7 @@ const About = () => {
                           <motion.div
                             key={j}
                             whileHover={{ scale: 1.06, borderColor: "rgba(241,48,36,0.6)" }}
-                            className="px-4 py-2 bg-white/5 border border-white/10 rounded-full text-sm font-mono text-white/70 hover:text-white transition-colors cursor-default"
+                            className="px-3 py-1.5 xl:px-4 xl:py-2 bg-white/5 border border-white/10 rounded-full text-xs xl:text-sm font-mono text-white/70 hover:text-white transition-colors cursor-default"
                           >
                             {item}
                           </motion.div>
@@ -213,9 +213,9 @@ const About = () => {
             {/* ── EXPERIENCE ── */}
             {activeTab === "experience" && (
               <motion.div key="experience" variants={paneVariants} initial="initial" animate="animate" exit="exit"
-                className="h-full flex flex-col overflow-y-auto card-scroll"
+                className="flex flex-col xl:h-full xl:overflow-y-auto card-scroll"
               >
-                <h2 className="text-3xl xl:text-5xl font-semibold mb-10 shrink-0">
+                <h2 className="text-2xl xl:text-5xl font-semibold mb-10 shrink-0">
                   Work <span className="text-accent">Experience</span>
                 </h2>
                 <div className="relative flex flex-col gap-y-10 pl-8 before:absolute before:left-2 before:top-2 before:bottom-2 before:w-[2px] before:bg-white/10">
@@ -227,11 +227,9 @@ const About = () => {
                       transition={{ delay: i * 0.1, duration: 0.4 }}
                       className="relative"
                     >
-                      {/* Timeline dot */}
                       <div className="absolute -left-[30px] top-1.5 w-3 h-3 rounded-full bg-accent shadow-[0_0_10px_rgba(241,48,36,0.7)] z-10" />
-
                       <div className="text-[11px] text-accent font-mono uppercase tracking-[2px] mb-2">{exp.stage}</div>
-                      <h3 className="text-xl xl:text-2xl font-bold text-white mb-1">{exp.title}</h3>
+                      <h3 className="text-lg xl:text-2xl font-bold text-white mb-1">{exp.title}</h3>
                       <div className="text-sm text-white/40 font-mono mb-3">{exp.company}</div>
                       <p className="text-white/60 text-sm leading-relaxed max-w-2xl">{exp.desc}</p>
                     </motion.div>
@@ -243,9 +241,9 @@ const About = () => {
             {/* ── BACKGROUND ── */}
             {activeTab === "background" && (
               <motion.div key="background" variants={paneVariants} initial="initial" animate="animate" exit="exit"
-                className="h-full flex flex-col overflow-y-auto card-scroll"
+                className="flex flex-col xl:h-full xl:overflow-y-auto card-scroll"
               >
-                <h2 className="text-3xl xl:text-5xl font-semibold mb-10 shrink-0">
+                <h2 className="text-2xl xl:text-5xl font-semibold mb-10 shrink-0">
                   Background & <span className="text-accent">Impact</span>
                 </h2>
                 <div className="flex flex-col gap-y-12">
@@ -264,7 +262,7 @@ const About = () => {
                             className="relative"
                           >
                             <div className="absolute -left-[30px] top-1.5 w-3 h-3 rounded-full bg-white/40 z-10" />
-                            <h3 className="text-lg xl:text-xl font-bold text-white mb-1">{item.title}</h3>
+                            <h3 className="text-base xl:text-xl font-bold text-white mb-1">{item.title}</h3>
                             <div className="text-xs text-white/40 font-mono mb-2">{item.sub}</div>
                             {item.desc && <p className="text-white/60 text-sm leading-relaxed max-w-2xl">{item.desc}</p>}
                           </motion.div>
@@ -279,8 +277,9 @@ const About = () => {
         </div>
       </div>
 
-      {/* ── Mobile Tab Bar (shows on < xl) ────────────────────────────────── */}
-      <div className="xl:hidden fixed bottom-4 left-1/2 -translate-x-1/2 z-50 flex gap-2 bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl p-2">
+      {/* ── Mobile Tab Bar (stacked above bottom nav) ──────────────────────── */}
+      {/* z-40 sits above page content (z-10) but below nav (z-50). bottom-[88px] = nav height (80px) + gap */}
+      <div className="xl:hidden fixed bottom-[88px] left-1/2 -translate-x-1/2 z-40 flex gap-2 bg-black/70 backdrop-blur-xl border border-white/10 rounded-2xl p-2 shadow-xl">
         {NAV.map((item) => (
           <button
             key={item.id}
