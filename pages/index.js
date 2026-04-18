@@ -1,5 +1,3 @@
-import Image from "next/image";
-
 import ParticlesContainer from "../components/ParticlesContainer";
 import ProjectsBtn from "../components/ProjectsBtn";
 import Avatar from "../components/Avatar";
@@ -21,10 +19,16 @@ const pressStart = Press_Start_2P({
   variable: "--font-press-start",
 });
 
+const proofPoints = [
+  "13 shipped products",
+  "Public repos + live products",
+  "Private work explained clearly",
+  "Full stack + AI delivery",
+];
+
 const Home = () => {
   return (
     <div className="bg-black min-h-[100dvh] xl:h-full relative overflow-hidden">
-      {/* Particles Layer */}
       <div className="absolute inset-0 z-0">
         <ParticlesContainer />
       </div>
@@ -71,27 +75,55 @@ const Home = () => {
               className="text-accent text-[0.8rem] sm:text-xl md:text-3xl mt-4 xl:mt-2 block"
             />
           </motion.h2>
+
           <motion.p
             variants={fadeIn("down", 0.3)}
             initial="hidden"
             animate="show"
             exit="hidden"
-            className="max-w-sm md:max-w-2xl lg:max-w-xl mx-auto lg:mx-0 mb-10 lg:mb-16 text-sm sm:text-base leading-relaxed"
+            className="max-w-sm md:max-w-2xl lg:max-w-xl mx-auto lg:mx-0 mb-8 text-sm sm:text-base leading-relaxed text-white/80"
           >
-            I don’t just build projects, I design and ship products that scale, perform, and create real impact.
-
-            With <ShinyText speed={2} spread={100} color="#94a3b8" shineColor="#ffffff" className="font-semibold">2+ years of experience</ShinyText>, I’ve worked across <ShinyText speed={2} spread={100} color="#94a3b8" shineColor="#ffffff" className="font-semibold">MERN, Next.js, Go, and modern AI stacks</ShinyText> to build production-grade systems end-to-end.
-
-            From scaling CRMs handling
-            <ShinyText speed={2} spread={110} color="#94a3b8" shineColor="#ffffff" className="font-semibold">10,000+ leads/month across multi-branch operations</ShinyText>,
-            to developing real-time architectures using <ShinyText speed={2} spread={90} color="#94a3b8" shineColor="#ffffff" className="font-semibold">WebSockets, Redis, and microservices</ShinyText>,
-            I focus on performance, reliability, and clean system design.
-
-            I’ve built SEO-driven platforms, high-conversion landing pages, and AI-powered products leveraging <ShinyText speed={2} spread={100} color="#94a3b8" shineColor="#ffffff" className="font-semibold">RAG, LangChain, and LLM integrations</ShinyText> always owning everything from backend architecture to deployment pipelines.
-
-            Driven by curiosity and a product-first mindset, my goal is simple <ShinyText speed={2} spread={130} color="#94a3b8" shineColor="#ffffff" className="font-semibold">build things that don’t just work, but stand out.</ShinyText>
+            I build product-ready web, mobile, CRM, and AI systems for teams that need clean execution and reliable delivery.
+            Over the last <ShinyText speed={2} spread={100} color="#94a3b8" shineColor="#ffffff" className="font-semibold">2+ years</ShinyText>, I have shipped live ecommerce experiences, internal CRMs handling <ShinyText speed={2} spread={110} color="#94a3b8" shineColor="#ffffff" className="font-semibold">10,000+ leads per month</ShinyText>, real-time products, and public AI tools.
+            This portfolio is structured around proof: shipped work, public repos where possible, and clear case-study notes for private client systems.
           </motion.p>
-          <div className="flex flex-col sm:flex-row items-center justify-center lg:hidden relative gap-y-4 gap-x-4 mt-8">
+
+          <motion.div
+            variants={fadeIn("down", 0.35)}
+            initial="hidden"
+            animate="show"
+            exit="hidden"
+            className="flex flex-wrap gap-2 justify-center lg:justify-start mb-8 max-w-2xl"
+          >
+            {proofPoints.map((item) => (
+              <span
+                key={item}
+                className="px-3 py-1.5 rounded-full border border-white/10 bg-white/[0.04] text-[10px] sm:text-[11px] font-mono uppercase tracking-[2px] text-white/65"
+              >
+                {item}
+              </span>
+            ))}
+          </motion.div>
+
+          <motion.div
+            variants={fadeIn("down", 0.38)}
+            initial="hidden"
+            animate="show"
+            exit="hidden"
+            className="flex flex-wrap gap-4 justify-center lg:justify-start text-[11px] font-mono uppercase tracking-[2px] text-white/45 mb-8"
+          >
+            <Link href="/testimonials" className="hover:text-accent transition-colors">
+              Proof of work
+            </Link>
+            <Link href="/harshal-sawatkar-resume.pdf" target="_blank" rel="noreferrer" className="hover:text-accent transition-colors">
+              Resume
+            </Link>
+            <Link href="https://github.com/Anonymous-hss" target="_blank" rel="noreferrer" className="hover:text-accent transition-colors">
+              GitHub
+            </Link>
+          </motion.div>
+
+          <div className="flex flex-col sm:flex-row items-center justify-center lg:hidden relative gap-y-4 gap-x-4 mt-4">
             <ProjectsBtn></ProjectsBtn>
             <Link
               href="/contact"
@@ -103,6 +135,7 @@ const Home = () => {
               <BsArrowRight className="-translate-y-[120%] opacity-0 group-hover:flex group-hover:-translate-y-0 group-hover:opacity-100 transition-all duration-300 absolute text-[22px] text-accent"></BsArrowRight>
             </Link>
           </div>
+
           <motion.div
             variants={fadeIn("down", 0.4)}
             initial="hidden"
@@ -123,8 +156,8 @@ const Home = () => {
           </motion.div>
         </div>
       </div>
+
       <div className="w-[1200px] h-full absolute right-0 bottom-0 pointer-events-none z-10">
-        {/* Deep Space Focal Glow */}
         <div className="w-[80vw] h-[80vw] max-w-[800px] max-h-[800px] absolute bottom-[-10%] right-[-10%] bg-[radial-gradient(circle,_var(--tw-gradient-stops))] from-accent/30 via-accent/5 to-transparent blur-[120px] rounded-full mix-blend-screen opacity-70"></div>
         <motion.div
           variants={fadeIn("up", 0.5)}

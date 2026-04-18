@@ -1,36 +1,40 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Harshal Sawatkar Portfolio
 
-## Getting Started
+Portfolio site built with Next.js to present Harshal Sawatkar's work across full stack engineering, CRM systems, mobile apps, and AI products.
 
-First, run the development server:
+## What changed
+
+- Repositioned the site around proof instead of self-claims.
+- Added metadata for stronger search and link previews.
+- Turned the old testimonials route into a proof-of-work page.
+- Added project briefs with role, outcome, and verification notes.
+- Linked the on-site PDF resume directly from the header.
+
+## Tech stack
+
+- Next.js
+- React
+- Tailwind CSS
+- Framer Motion
+
+## Local development
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+## Production checks
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+```bash
+npm run lint
+npm run build
+```
 
-## Learn More
+## Resume
 
-To learn more about Next.js, take a look at the following resources:
+The current resume is served from:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+`public/harshal-sawatkar-resume.pdf`
