@@ -41,7 +41,7 @@ const Header = () => {
           </Link>
           <div className="flex items-center gap-x-3 xl:gap-x-6">
             <Link
-              href="https://drive.google.com/file/d/1oOt5GGYGottKQ_ev91qQ5b-GVH6hzWYz/view?usp=sharing"
+              href="/harshal-sawatkar-resume.pdf"
               target="_blank"
               rel="noreferrer"
               className="rounded-full border border-white/50 px-3 xl:px-4 py-1.5 text-xs transition-all duration-300 hover:border-accent hover:text-accent font-medium flex items-center justify-center"
