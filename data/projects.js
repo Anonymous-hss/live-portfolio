@@ -330,4 +330,27 @@ export const projectData = [
       details: true,
     },
   },
+  {
+    id: 14,
+    title: "FastChat (Aaryx)",
+    category: "AI",
+    tagline: "Intelligent AI assistant powered by Llama-3.1 via Groq and LangGraph.",
+    description:
+      "A feature-rich personal AI assistant featuring real-time web search integration via Tavily, and a modern frontend with an orbital-themed interactive UI.",
+    stack: ["Next.js", "FastAPI", "LangGraph", "Groq (Llama-3.1)", "Tavily", "Tailwind CSS"],
+    image: ["/Projects/aaryx.png"],
+    featured: true,
+    role:
+      "Engineered the LangGraph orchestration flow and the responsive Next.js frontend, integrating web search and chat memory seamlessly.",
+    outcome:
+      "Delivered a performant personal chatbot application that can execute real-time web research to ground its conversations.",
+    verification:
+      "The source code is publicly accessible via GitHub for comprehensive technical review.",
+    proofLinks: [{ label: "GitHub repo", href: "https://github.com/Anonymous-hss/Aaryx" }],
+    links: {
+      github: "https://github.com/Anonymous-hss/Aaryx",
+      live: null,
+      details: true,
+    },
+  },
 ];

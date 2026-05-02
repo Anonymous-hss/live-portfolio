@@ -59,9 +59,16 @@ const Nav = () => {
                 {/* Desktop Dynamic Expansion Pill */}
                 <div className="hidden xl:flex absolute right-0 items-center justify-end h-full w-full rounded-full group-hover:w-[140px] bg-transparent group-hover:bg-white/10 transition-all duration-300 ease-out overflow-hidden group-hover:drop-shadow-[0_0_8px_rgba(255,255,255,0.4)] z-0">
                   <span className="whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity duration-300 mr-[56px] text-[13px] font-semibold text-white capitalize tracking-wide">
-                    {link.name}
+                    {link.name}{link.name === "projects" ? " 🔥" : ""}
                   </span>
                 </div>
+
+                {/* Flame indicator for projects */}
+                {link.name === "projects" && (
+                  <span className="flame-icon absolute -top-3 -right-1 z-20 text-[13px]">
+                    🔥
+                  </span>
+                )}
 
                 {/* Foreground Icon */}
                 <div className="relative z-10 transition-all duration-300 group-hover:text-white flex items-center justify-center">
