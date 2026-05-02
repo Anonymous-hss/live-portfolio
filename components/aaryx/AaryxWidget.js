@@ -222,7 +222,11 @@ export default function AaryxWidget() {
     setMessages((prev) => [...prev, userMsg]);
 
     try {
-      const res = await fetch(`/api/aaryx?message=${encodeURIComponent(textToSend)}`, {
+      // Direct call to Render backend (bypasses Vercel Serverless Function 10s timeout limit)
+      const baseUrl = process.env.NEXT_PUBLIC_AARYX_BACKEND_URL || "https://aaryx-backend.onrender.com";
+      const fetchUrl = `${baseUrl}/portfolio_chat_stream/${encodeURIComponent(textToSend)}`;
+      
+      const res = await fetch(fetchUrl, {
         signal: controller.signal,
       });
 
