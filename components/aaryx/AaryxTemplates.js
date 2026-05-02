@@ -31,6 +31,11 @@ export const defaultTemplates = [
     title: "Resume Highlights",
     msg: "Summarize the key highlights from Harshal's resume",
   },
+  {
+    icon: "✉️",
+    title: "Drop a Message",
+    msg: "I want to leave a message for Harshal",
+  },
 ];
 
 export default function AaryxTemplates({ onSelectTemplate }) {
