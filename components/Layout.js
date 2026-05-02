@@ -9,6 +9,7 @@ const sora = Sora({
 import Nav from "../components/Nav";
 import Header from "../components/Header";
 import TopLeftImg from "../components/TopLeftImg";
+import AaryxWidget from "./aaryx/AaryxWidget";
 
 const Layout = ({ children }) => {
   return (
@@ -20,6 +21,7 @@ const Layout = ({ children }) => {
       <Header></Header>
 
       {children}
+      <AaryxWidget />
     </div>
   );
 };
