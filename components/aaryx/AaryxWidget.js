@@ -58,6 +58,85 @@ function formatTimer(ms) {
   return (ms / 1000).toFixed(1) + "s";
 }
 
+function InlineContactForm() {
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [msg, setMsg] = useState("");
+  const [submitting, setSubmitting] = useState(false);
+  const [sent, setSent] = useState(false);
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    if (!name || !email || !msg) return;
+    setSubmitting(true);
+    try {
+      await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: { "Content-Type": "application/json", "Accept": "application/json" },
+        body: JSON.stringify({
+          access_key: "6e54b5a7-1417-45b3-8094-7c0d6590d5de",
+          name,
+          email,
+          subject: "Aaryx Chat Widget Message",
+          message: msg,
+        }),
+      });
+      setSent(true);
+    } catch (err) {
+      console.error(err);
+    } finally {
+      setSubmitting(false);
+    }
+  };
+
+  if (sent) {
+    return (
+      <div className="p-2 border border-green-500/20 bg-green-500/5 rounded-xl text-green-300 text-[11px] mt-1 select-none animate-fade-in">
+        ✨ Message sent successfully! Harshal will reach out to you shortly.
+      </div>
+    );
+  }
+
+  return (
+    <form onSubmit={handleSubmit} className="flex flex-col gap-2 mt-2 bg-white/[0.03] border border-white/5 p-3 rounded-xl">
+      <p className="text-[10px] text-white/50 uppercase tracking-wider font-semibold mb-1">
+        📬 Leave a Message directly
+      </p>
+      <input
+        type="text"
+        placeholder="Your name"
+        required
+        value={name}
+        onChange={(e) => setName(e.target.value)}
+        className="w-full bg-white/5 border border-white/10 rounded-lg p-2 text-white text-[11px] focus:outline-none focus:border-purple-500/40"
+      />
+      <input
+        type="email"
+        placeholder="Your email"
+        required
+        value={email}
+        onChange={(e) => setEmail(e.target.value)}
+        className="w-full bg-white/5 border border-white/10 rounded-lg p-2 text-white text-[11px] focus:outline-none focus:border-purple-500/40"
+      />
+      <textarea
+        placeholder="Your message..."
+        required
+        value={msg}
+        onChange={(e) => setMsg(e.target.value)}
+        rows={2}
+        className="w-full bg-white/5 border border-white/10 rounded-lg p-2 text-white text-[11px] focus:outline-none focus:border-purple-500/40 resize-none"
+      />
+      <button
+        type="submit"
+        disabled={submitting}
+        className="w-full py-1.5 rounded-lg bg-purple-600 hover:bg-purple-500 text-white font-semibold text-[11px] tracking-wide transition-all active:scale-[0.98] outline-none border-none cursor-pointer"
+      >
+        {submitting ? "Sending..." : "Submit Message"}
+      </button>
+    </form>
+  );
+}
+
 export default function AaryxWidget() {
   const router = useRouter();
   const [isOpen, setIsOpen] = useState(false);
@@ -101,6 +180,19 @@ export default function AaryxWidget() {
   const startTimeRef = useRef(null);
   const messagesEndRef = useRef(null);
   const inputRef = useRef(null);
+  const messagesContainerRef = useRef(null);
+  const [showScrollDown, setShowScrollDown] = useState(false);
+
+  const handleScroll = () => {
+    if (!messagesContainerRef.current) return;
+    const { scrollTop, scrollHeight, clientHeight } = messagesContainerRef.current;
+    const isAtBottom = scrollHeight - scrollTop - clientHeight < 100;
+    setShowScrollDown(!isAtBottom);
+  };
+
+  const scrollToBottom = () => {
+    messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
+  };
 
   // Load from local storage or generate welcome message
   useEffect(() => {
@@ -141,9 +233,14 @@ export default function AaryxWidget() {
     messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
   }, [messages, statusText]);
 
-  // Focus input on open
+  // Focus input and scroll down instantly on open
   useEffect(() => {
-    if (isOpen) setTimeout(() => inputRef.current?.focus(), 200);
+    if (isOpen) {
+      setTimeout(() => {
+        inputRef.current?.focus();
+        messagesEndRef.current?.scrollIntoView({ behavior: "auto" });
+      }, 200);
+    }
   }, [isOpen]);
 
   // Keyboard: Escape to close
@@ -179,6 +276,16 @@ export default function AaryxWidget() {
     navigator.clipboard.writeText(text).catch(() => {});
   }, []);
 
+  const handleClearChat = useCallback(() => {
+    localStorage.removeItem("aaryx_chat_history");
+    setMessages([{
+      id: "welcome", role: "assistant",
+      content: `I'm **Aaryx**. I know everything about Harshal — his work, his projects, what makes him different. Ask me anything, or I'll just tell you what you need to know.`,
+      time: new Date().toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" }),
+    }]);
+    setShowTemplates(true);
+  }, []);
+
   const handleRetry = useCallback((msgContent) => {
     // Remove the failed assistant message then re-send
     setMessages((prev) => {
@@ -204,6 +311,43 @@ export default function AaryxWidget() {
   const sendMessage = async (textToSend) => {
     if (!textToSend.trim() || isStreaming) return;
     setInputMessage("");
+
+    // Intercept contact intent
+    const lower = textToSend.toLowerCase();
+    const isContactIntent = lower.includes("leave a message") || lower.includes("drop a message") || lower.includes("contact");
+
+    if (isContactIntent) {
+      const userMsg = {
+        id: Date.now().toString(), role: "user", content: textToSend,
+        time: new Date().toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" }),
+      };
+      setMessages((prev) => [...prev, userMsg, {
+        id: (Date.now() + 1).toString(), role: "assistant", content: "You can leave a message directly here using the form below, and I'll notify Harshal right away!", showContactForm: true,
+        time: new Date().toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" })
+      }]);
+      setIsStreaming(false);
+      setOrbState("idle");
+      setStatusText("");
+      return;
+    }
+
+    // Silent notification for first visitor message
+    if (messages.filter(m => m.role === "user").length === 0) {
+      try {
+        fetch("https://api.web3forms.com/submit", {
+          method: "POST",
+          headers: { "Content-Type": "application/json", "Accept": "application/json" },
+          body: JSON.stringify({
+            access_key: "6e54b5a7-1417-45b3-8094-7c0d6590d5de",
+            name: "Aaryx Visitor Notification",
+            email: "visitor@aaryx.assistant",
+            subject: "Aaryx Chat Started",
+            message: `New Aaryx interaction: "${textToSend}"`
+          })
+        }).catch(() => {});
+      } catch (e) {}
+    }
+
     setIsStreaming(true);
     setOrbState("thinking");
     setStatusText("Thinking");
@@ -225,13 +369,17 @@ export default function AaryxWidget() {
       // Direct call to Render backend (bypasses Vercel Serverless Function 10s timeout limit)
       const baseUrl = process.env.NEXT_PUBLIC_AARYX_BACKEND_URL || "https://aaryx-backend.onrender.com";
       const fetchUrl = `${baseUrl}/portfolio_chat_stream/${encodeURIComponent(textToSend)}`;
+      console.log("[Aaryx Debug] Sending request to:", fetchUrl);
       
       const res = await fetch(fetchUrl, {
         signal: controller.signal,
       });
 
+      console.log("[Aaryx Debug] Received response. Status:", res.status, "Ok:", res.ok);
+
       if (!res.ok) {
-        console.error(`Aaryx API error: ${res.status} ${res.statusText}`);
+        const errText = await res.text().catch(() => "Unable to read error text");
+        console.error(`[Aaryx Debug] API error: ${res.status} ${res.statusText}. Body: ${errText}`);
         throw new Error("API_ERROR");
       }
 
@@ -245,14 +393,16 @@ export default function AaryxWidget() {
       const decoder = new TextDecoder();
       let done = false;
       let hasContent = false;
+      let sseBuffer = "";
 
       while (!done) {
         const { value, done: readerDone } = await reader.read();
         done = readerDone;
         if (!value) continue;
 
-        const chunk = decoder.decode(value);
-        const lines = chunk.split("\n\n");
+        sseBuffer += decoder.decode(value, { stream: true });
+        const lines = sseBuffer.split("\n\n");
+        sseBuffer = lines.pop() || "";
 
         for (const line of lines) {
           if (!line.startsWith("data: ")) continue;
@@ -291,13 +441,14 @@ export default function AaryxWidget() {
       // Success — record answer time
       const totalTime = Date.now() - startTimeRef.current;
       setAnswerTime(totalTime);
+      console.log("[Aaryx Debug] Stream completed successfully in", totalTime, "ms");
 
     } catch (err) {
       if (err.name === "AbortError") {
-        console.log("Aaryx: User cancelled generation.");
+        console.log("[Aaryx Debug] User cancelled generation.");
         return;
       }
-      console.error("Aaryx connection error:", err);
+      console.error("[Aaryx Debug] Connection error:", err);
 
       const isRateLimit = err.message?.includes("429") || err.message?.includes("rate");
       const errorContent = isRateLimit
@@ -370,6 +521,13 @@ export default function AaryxWidget() {
 
               {/* Window controls */}
               <div className="flex items-center gap-1">
+                {/* Clear Chat */}
+                <button onClick={handleClearChat} title="Clear chat"
+                  className="p-1.5 rounded-lg hover:bg-white/10 text-white/40 hover:text-white transition-all cursor-pointer outline-none">
+                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" />
+                  </svg>
+                </button>
                 {/* Templates toggle */}
                 <button onClick={() => setShowTemplates((p) => !p)} title="Toggle templates"
                   className="p-1.5 rounded-lg hover:bg-white/10 text-white/40 hover:text-white transition-all cursor-pointer outline-none">
@@ -401,8 +559,17 @@ export default function AaryxWidget() {
             </div>
 
             {/* Messages */}
-            <div className="flex-1 px-4 py-3 overflow-y-auto flex flex-col gap-3">
+            <div className="flex-1 px-4 py-3 overflow-y-auto flex flex-col gap-3 relative" ref={messagesContainerRef} onScroll={handleScroll}>
+              {showScrollDown && (
+                <button onClick={scrollToBottom} type="button"
+                  className="absolute bottom-4 right-6 p-2 rounded-full bg-purple-600 hover:bg-purple-500 border border-white/20 text-white shadow-lg transition-all cursor-pointer outline-none z-30 animate-bounce flex items-center justify-center">
+                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M19.5 13.5L12 21m0 0l-7.5-7.5M12 21V3" />
+                  </svg>
+                </button>
+              )}
               {messages.map((m, idx) => (
+                m.role === "assistant" && !m.content && isStreaming ? null :
                 <div key={m.id || idx}
                   className={`flex gap-2 max-w-[88%] group ${m.role === "user" ? "ml-auto flex-row-reverse" : "mr-auto"}`}>
                   {m.role === "assistant" && (
@@ -424,6 +591,7 @@ export default function AaryxWidget() {
                         : "bg-white/[0.04] border-white/[0.06] text-white/90 rounded-bl-sm"
                     }`}>
                       {m.role === "assistant" ? <AaryxResponseRenderer content={m.content} /> : <p className="leading-relaxed whitespace-pre-wrap">{m.content}</p>}
+                      {m.role === "assistant" && m.showContactForm && <InlineContactForm />}
 
                       {/* Copy + Retry buttons */}
                       {m.role === "assistant" && m.content && !isStreaming && (
