@@ -19,7 +19,7 @@ const RANDOM_DIALOGUES = {
     "Hey! I'm Aaryx. I know everything.",
     "Still scrolling? Just ask me directly.",
     "Looking for a dev? You found one.",
-    "13+ shipped products. Want the highlights?",
+    "15+ shipped products. Want the highlights?",
     "He built me. Imagine what he'll build for you.",
     "AI, Go, React, Node - pick your weapon.",
     "I dare you to quiz me on Harshal.",
@@ -36,7 +36,7 @@ const RANDOM_DIALOGUES = {
   "/projects": [
     "Want the real story behind any project?",
     "Ask me for GitHub links or live demos!",
-    "13 projects. Each one shipped to production.",
+    "15 projects. Each one shipped to production.",
     "Pick any project. I'll break it down.",
   ],
   "/contact": [

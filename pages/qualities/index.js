@@ -75,7 +75,7 @@ const qualityData = [
 
 const stats = [
   { value: 2, suffix: "+", label: "Years Exp." },
-  { value: 13, suffix: "+", label: "Shipped Products" },
+  { value: 15, suffix: "+", label: "Shipped Products" },
   { value: 10, suffix: "k+", label: "Leads Per Month" },
   { value: 5, suffix: "", label: "Proof Areas" },
 ];

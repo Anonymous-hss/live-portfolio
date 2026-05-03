@@ -353,4 +353,23 @@ export const projectData = [
       details: true,
     },
   },
+  {
+    id: 15,
+    title: "Employee Attendance Portal",
+    category: "Web",
+    tagline: "Fully featured enterprise web application for managing employee attendance, track-ins, and leaves.",
+    description: "Designed with robust Role-Based Access Control (RBAC), multi-tiered workflows, and advanced security policies.",
+    stack: ["React.js", "Node.js", "Express.js", "Sequelize ORM", "PostgreSQL", "JWT", "bcryptjs"],
+    image: ["/Projects/attendance-erp (1).png", "/Projects/attendance-erp (2).png", "/Projects/attendance-erp (3).png", "/Projects/attendance-erp (4).png"],
+    featured: true,
+    role: "Architected the enterprise authentication system with sliding JWT and full multi-tiered role-based access control.",
+    outcome: "Created a robust multi-role portal supporting Employees, Managers, and HR, fully operational with audit logging.",
+    verification: "Internal and private project, screenshots available in card showcase.",
+    proofLinks: [],
+    links: {
+      github: null,
+      live: null,
+      details: true,
+    },
+  },
 ];

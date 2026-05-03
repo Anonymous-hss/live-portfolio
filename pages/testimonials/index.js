@@ -61,7 +61,7 @@ const proofCards = [
 ];
 
 const stats = [
-  { value: 13, suffix: "+", label: "Shipped Products" },
+  { value: 15, suffix: "+", label: "Shipped Products" },
   { value: 2, suffix: "+", label: "Years Experience" },
   { value: 10, suffix: "k+", label: "Leads Per Month" },
   { value: 4, suffix: "", label: "Public Proof Paths" },
