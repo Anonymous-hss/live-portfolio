@@ -61,7 +61,7 @@ const Projects = () => {
             <div className="hidden xl:flex flex-col gap-y-2 text-[10px] font-mono uppercase tracking-[3px] text-white/20">
               <div className="flex items-center gap-x-2">
                 <div className="w-1 h-1 bg-accent rounded-full" />
-                13+ Production Releases
+                15+ Production Releases
               </div>
               <div className="flex items-center gap-x-2">
                 <div className="w-1 h-1 bg-accent rounded-full" />

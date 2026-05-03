@@ -90,7 +90,7 @@ function ResumeCTA() {
   return (
     <div className="my-2 p-3 bg-gradient-to-r from-purple-900/40 to-indigo-900/40 border border-purple-500/30 rounded-xl text-center">
       <p className="text-[10px] uppercase tracking-widest text-purple-200/60 mb-1 font-semibold">📄 Resume</p>
-      <p className="text-xs text-white mb-2">Full-Stack Dev · 2+ yrs · 13+ ships</p>
+      <p className="text-xs text-white mb-2">Full-Stack Dev · 2+ yrs · 15+ ships</p>
       <a href="/harshal-sawatkar-resume.pdf" target="_blank" rel="noreferrer" className="inline-block px-4 py-1.5 bg-purple-500 hover:bg-purple-400 text-white text-[10px] font-bold uppercase tracking-wider rounded-lg transition-colors">
         Download Resume ↓
       </a>
