@@ -1,6 +1,79 @@
 export const projectData = [
   {
     "id": 1,
+    "title": "StockGenius AI",
+    "category": "AI",
+    "tagline": "Institutional-grade FinTech analytics, real-time WebSocket gateway, and autonomous AI copilot.",
+    "description": "An institutional-grade, multi-market (NSE/BSE & NYSE/NASDAQ) FinTech platform featuring 'Ask Genius' (an autonomous tool-calling AI financial copilot), a sub-50ms reference-counted WebSocket streaming gateway, a virtual paper trading terminal with concurrency-safe ledger execution, and installable PWA/Android applications.",
+    "stack": [
+      "React 18",
+      "Node.js",
+      "Python (FastAPI)",
+      "Socket.IO",
+      "Redis",
+      "Azure OpenAI",
+      "PostgreSQL",
+      "MongoDB",
+      "TanStack Virtual",
+      "Capacitor",
+      "PWA"
+    ],
+    "image": "/Projects/stockgenius.png",
+    "featured": true,
+    "role": "Lead Full-Stack & Systems Engineer / Engineering Lead: Architected end-to-end microservices, real-time WebSocket broker fan-out bridge, Azure OpenAI tool-calling agent with SSE streaming, and concurrency-safe paper trading terminal.",
+    "outcome": "Delivered sub-50ms tick-to-client streaming, cut upstream broker API rate-limit overhead by 85% via reference-counted dynamic subscription pooling, eliminated race conditions during burst volatility, and shipped installable PWA & Android builds.",
+    "verification": "Live production platform accessible at stockgenius.ai with active users across Indian and US equity markets.",
+    "proofLinks": [
+      {
+        "label": "Live platform",
+        "href": "https://stockgenius.ai/"
+      }
+    ],
+    "links": {
+      "github": null,
+      "live": "https://stockgenius.ai/",
+      "details": true
+    }
+  },
+  {
+    "id": 2,
+    "title": "DataGlow (SCAIDR Engine)",
+    "category": "AI",
+    "tagline": "Enterprise AI data quality, 3-layer scoring engine, and autonomous remediation platform.",
+    "description": "An enterprise data trust and governance platform combining a deterministic statistical metric engine with a 5-agent LangGraph committee and CDO consensus judge, Meridian predictive drift forecasting (OLS regression), cross-BI consistency validation, and zero-touch auto-remediation across modern lakehouses (Databricks Delta Lake, Snowflake, BigQuery).",
+    "stack": [
+      "Python",
+      "FastAPI",
+      "React 19",
+      "LangGraph",
+      "Azure OpenAI",
+      "Databricks",
+      "Redis",
+      "PostgreSQL",
+      "SciPy",
+      "Pandas",
+      "Neo4j",
+      "Docker"
+    ],
+    "image": "/Projects/dataglow.png",
+    "featured": true,
+    "role": "Project Lead & Lead AI / Data Systems Architect: Spearheaded the end-to-end design and delivery of the 3-Layer Scoring Engine, Meridian predictive drift layer, and live event-driven CDC self-healing architecture.",
+    "outcome": "Eliminated metric hallucination via mathematical determinism + LangGraph arbitration, forecasted quality breaches days in advance with financial dollar-risk impact modeling, and automated lakehouse remediation with Redis queues, cutting incident MTTR from hours to seconds.",
+    "verification": "Live enterprise platform at dataglow.ai and enterprise architecture documentation.",
+    "proofLinks": [
+      {
+        "label": "Live platform",
+        "href": "https://dataglow.ai/"
+      }
+    ],
+    "links": {
+      "github": null,
+      "live": "https://dataglow.ai/",
+      "details": true
+    }
+  },
+  {
+    "id": 3,
     "title": "ACE (Life OS)",
     "category": "AI",
     "tagline": "Autonomous life operating system with neural voice and proactive coaching.",
@@ -37,7 +110,7 @@ export const projectData = [
     }
   },
   {
-    "id": 2,
+    "id": 4,
     "title": "Ghost Agent",
     "category": "AI",
     "tagline": "Autonomous AI sales agent powered by LangGraph state machines and NVIDIA NIM.",
@@ -70,7 +143,7 @@ export const projectData = [
     }
   },
   {
-    "id": 3,
+    "id": 5,
     "title": "StealthGrowth",
     "category": "Web",
     "tagline": "Futuristic digital agency website with interactive 3D WebGL visuals.",
@@ -102,7 +175,7 @@ export const projectData = [
     }
   },
   {
-    "id": 4,
+    "id": 6,
     "title": "Statsky",
     "category": "Mobile",
     "tagline": "Real-time sports betting and live match data.",
@@ -130,7 +203,7 @@ export const projectData = [
     }
   },
   {
-    "id": 5,
+    "id": 7,
     "title": "Zizbey Jobs",
     "category": "Mobile",
     "tagline": "Workforce management with background location tracking.",
@@ -163,7 +236,7 @@ export const projectData = [
     }
   },
   {
-    "id": 6,
+    "id": 8,
     "title": "Arlyn.us",
     "category": "Web",
     "tagline": "Luxury ecommerce for a New York fragrance brand.",
@@ -197,7 +270,7 @@ export const projectData = [
     }
   },
   {
-    "id": 7,
+    "id": 9,
     "title": "Reborn Clinic",
     "category": "Web",
     "tagline": "SEO-focused healthcare platform plus CRM-connected growth stack.",
@@ -232,7 +305,7 @@ export const projectData = [
     }
   },
   {
-    "id": 8,
+    "id": 10,
     "title": "Jeanrish",
     "category": "Web",
     "tagline": "Global perfume storefront built for brand-first selling.",
@@ -266,7 +339,7 @@ export const projectData = [
     }
   },
   {
-    "id": 9,
+    "id": 11,
     "title": "Bezella",
     "category": "Web",
     "tagline": "Jewelry ecommerce with visual storytelling and conversion focus.",
@@ -300,7 +373,7 @@ export const projectData = [
     }
   },
   {
-    "id": 10,
+    "id": 12,
     "title": "Marriage Bio Data Maker",
     "category": "Web",
     "tagline": "A customizable biodata builder with monetized generation flow.",
@@ -334,7 +407,7 @@ export const projectData = [
     }
   },
   {
-    "id": 11,
+    "id": 13,
     "title": "Reborn CRM",
     "category": "CRM",
     "tagline": "Internal lead engine connecting ad channels to clinic operations.",
@@ -365,7 +438,7 @@ export const projectData = [
     }
   },
   {
-    "id": 12,
+    "id": 14,
     "title": "PetStop (Fastlite)",
     "category": "CRM",
     "tagline": "Inventory and sales tracking for a niche hardware business.",
@@ -389,7 +462,7 @@ export const projectData = [
     }
   },
   {
-    "id": 13,
+    "id": 15,
     "title": "Vapi CRM",
     "category": "CRM",
     "tagline": "Operations layer for AI voice agents and feedback loops.",
@@ -421,7 +494,7 @@ export const projectData = [
     }
   },
   {
-    "id": 14,
+    "id": 16,
     "title": "Local Mind",
     "category": "AI",
     "tagline": "A privacy-first coding assistant for local AI workflows.",
@@ -450,7 +523,7 @@ export const projectData = [
     }
   },
   {
-    "id": 15,
+    "id": 17,
     "title": "AI Mascot",
     "category": "AI",
     "tagline": "A multi-agent growth system for local business marketing.",
@@ -487,7 +560,7 @@ export const projectData = [
     }
   },
   {
-    "id": 16,
+    "id": 18,
     "title": "Jyotish Guru",
     "category": "AI",
     "tagline": "An astrology product built on modern LLM workflows.",
@@ -522,7 +595,7 @@ export const projectData = [
     }
   },
   {
-    "id": 17,
+    "id": 19,
     "title": "FastChat (Aaryx)",
     "category": "AI",
     "tagline": "Intelligent AI assistant powered by Llama-3.1 via Groq and LangGraph.",
@@ -555,7 +628,7 @@ export const projectData = [
     }
   },
   {
-    "id": 18,
+    "id": 20,
     "title": "Employee Attendance Portal",
     "category": "Web",
     "tagline": "Fully featured enterprise web application for managing employee attendance, track-ins, and leaves.",

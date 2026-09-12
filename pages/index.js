@@ -20,7 +20,7 @@ const pressStart = Press_Start_2P({
 });
 
 const proofPoints = [
-  "18 shipped products",
+  "20 shipped products",
   "Public repos + live products",
   "Private work explained clearly",
   "Full stack + AI delivery",

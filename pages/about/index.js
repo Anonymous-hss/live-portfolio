@@ -1,4 +1,3 @@
-/* eslint-disable react/jsx-key */
 import React, { useState } from "react";
 import Avatar from "../../components/Avatar";
 import Circles from "../../components/Circles";
@@ -6,25 +5,118 @@ import { motion, AnimatePresence } from "framer-motion";
 import { fadeIn } from "../../variants";
 import CountUp from "react-countup";
 
-// ─── Data ───────────────────────────────────────────────────────────────────
+// ─── Data ────────────────────────────────────────────────────────────────────
 const aboutData = {
   bio: {
     heading: "Who am I?",
-    bio: "I am a results-driven Full-Stack Developer with over 2 years of experience engineering production-grade, AI-integrated applications. I specialize in designing scalable backend architectures, real-time systems, and multi-tenant platforms using React, Go, and Node.js. From scaling CRMs processing 10k+ leads monthly to architecting RAG-based platforms with LangChain and LangGraph, I own the entire development lifecycle — from schema design to deployment.",
+    bio: "I am a Lead Full-Stack & AI Systems Engineer with over 2 years of experience leading engineering teams and architecting mission-critical, production-grade applications. At Aavilabs (aavilabs.com), I head the engineering and architecture teams building institutional FinTech and enterprise AI flagships — notably StockGenius AI (stockgenius.ai), a high-frequency multi-market trading copilot with sub-50ms WebSocket streaming and broker fan-out gateways, and DataGlow (dataglow.ai), an enterprise AI data governance platform featuring a deterministic 3-layer scoring engine and automated lakehouse remediation. From scaling CRMs handling 10k+ leads monthly to deploying agentic state machines with LangGraph, I own the entire lifecycle from architecture to production.",
+    paragraphs: [
+      "I am a results-driven Lead Full-Stack & AI Systems Engineer with over 2 years of experience leading engineering teams and architecting mission-critical, production-grade applications. At Aavilabs, I head the engineering and architecture teams building institutional FinTech and enterprise AI flagships — including StockGenius AI (high-frequency multi-market trading platform with sub-50ms WebSocket streaming and Upstox broker bridges) and DataGlow (enterprise AI data quality platform with a deterministic 3-layer scoring engine and automated lakehouse remediation).",
+      "My specialization spans high-concurrency real-time distributed systems, multi-agent AI workflows (LangGraph, LangChain), and scalable multi-tenant platforms using React, Python, Go, and Node.js. Whether eliminating metric hallucinations via mathematical determinism, designing race-condition-free financial ledgers, streaming neural voice companions with zero latency, or scaling clinic CRMs processing 10k+ monthly leads, I own the entire lifecycle from low-level dataflow design to high-availability production.",
+      "With 20 shipped production products, public open-source architectures, and active leadership across developer communities, I engineer systems that combine state-of-the-art AI intelligence with uncompromising reliability, mathematical rigor, and ultra-fluid user experience."
+    ],
     stats: [
       { value: 2, label: "Years Exp." },
-      { value: 18, label: "Projects" },
+      { value: 20, label: "Projects" },
       { value: 20, label: "Events" },
     ],
   },
   skills: [
-    { category: "Core & Frameworks", items: ["React.js", "Next.js", "React Native", "TypeScript", "JavaScript", "Vue.js", "Three.js", "HTML5", "CSS3"] },
-    { category: "Backend & Databases", items: ["Node.js", "Go", "Express.js", "REST APIs", "WebSockets", "PostgreSQL", "MongoDB", "Redis", "MySQL", "Prisma"] },
-    { category: "AI / ML", items: ["LangChain", "LangGraph", "Agentic Workflows", "RAG", "FAISS", "Vector DBs", "Python", "Ollama"] },
-    { category: "DevOps & Tools", items: ["Docker", "AWS", "Git", "GitHub", "CI/CD", "Jest", "Postman", "Linux/Kali"] },
-    { category: "Design", items: ["Figma", "Tailwind CSS", "Framer Motion", "Glassmorphism"] },
+    {
+      category: "AI & Agentic Systems",
+      items: [
+        "LangGraph",
+        "LangChain",
+        "Multi-Agent Swarms",
+        "Azure OpenAI",
+        "NVIDIA NIM",
+        "RAG Pipelines",
+        "FAISS",
+        "Vector DBs",
+        "Azure Neural Voice",
+        "Ollama",
+        "Prompt Engineering"
+      ]
+    },
+    {
+      category: "Real-Time & Distributed Backend",
+      items: [
+        "Python (FastAPI)",
+        "Node.js",
+        "Go (Golang)",
+        "Express.js",
+        "WebSockets",
+        "Socket.IO",
+        "Server-Sent Events (SSE)",
+        "REST APIs",
+        "Microservices",
+        "Event-Driven CDC"
+      ]
+    },
+    {
+      category: "Data Engineering & Lakehouse",
+      items: [
+        "Databricks Delta Lake",
+        "Snowflake",
+        "Apache Spark",
+        "SciPy",
+        "Pandas",
+        "Redis (Cache & CDC)",
+        "PostgreSQL",
+        "MongoDB",
+        "Neo4j",
+        "MySQL",
+        "Prisma ORM"
+      ]
+    },
+    {
+      category: "Core, Frontend & Mobile",
+      items: [
+        "React.js (18/19)",
+        "Next.js",
+        "TypeScript",
+        "JavaScript",
+        "React Native",
+        "TanStack Virtual",
+        "Capacitor",
+        "PWA",
+        "Vue.js",
+        "Three.js (WebGL)"
+      ]
+    },
+    {
+      category: "Cloud, DevOps & Infrastructure",
+      items: [
+        "Docker",
+        "AWS (EC2, S3, CloudFront)",
+        "CI/CD GitHub Actions",
+        "Linux / Kali",
+        "Nginx",
+        "Postman",
+        "Jest",
+        "Upstox API Gateway"
+      ]
+    },
+    {
+      category: "UI/UX & Design Engineering",
+      items: [
+        "Tailwind CSS",
+        "Framer Motion",
+        "GSAP",
+        "Figma",
+        "Glassmorphism",
+        "Responsive Architecture"
+      ]
+    }
   ],
   experience: [
+    {
+      title: "Lead Full-Stack & AI Systems Engineer",
+      company: "Aavilabs",
+      companyUrl: "https://aavilabs.com/",
+      stage: "2025 - Present",
+      desc: "Leading the core engineering and development teams for flagship institutional AI & FinTech products: StockGenius AI (stockgenius.ai) — high-frequency multi-market trading copilot with sub-50ms WebSocket fanout & broker bridges; and DataGlow (dataglow.ai) — enterprise AI data quality platform with deterministic 3-layer scoring, Meridian predictive drift, and automated lakehouse self-healing.",
+    },
     {
       title: "Full-Stack Developer",
       company: "Zizbey Consultancy",
@@ -34,7 +126,7 @@ const aboutData = {
     {
       title: "Full-Stack Developer",
       company: "Reborn Skin & Hair Clinics",
-      stage: "2024 – 2025",
+      stage: "2024 - 2025",
       desc: "Engineered a production CRM platform processing 10k+ leads/month. Built real-time notification systems, multi-branch reporting dashboards, and automated patient flow pipelines.",
     },
     {
@@ -48,15 +140,15 @@ const aboutData = {
     {
       type: "_Education",
       items: [
-        { title: "B.Tech — Computer Science & Engineering", sub: "PBCOE, Nagpur · 2020 – 2024", desc: "Graduated with a focus on distributed systems, algorithms, and applied AI." },
-        { title: "HSC — Bifocal Science (Computer)", sub: "St. Paul Jr. College, Nagpur · 2020", desc: "" },
+        { title: "B.Tech - Computer Science & Engineering", sub: "PBCOE, Nagpur • 2020 - 2024", desc: "Graduated with a focus on distributed systems, algorithms, and applied AI." },
+        { title: "HSC - Bifocal Science (Computer)", sub: "St. Paul Jr. College, Nagpur • 2020", desc: "" },
       ],
     },
     {
       type: "_Leadership",
       items: [
-        { title: "President — Student Placement Cell", sub: "PBCOE · 2022 – 2023", desc: "Led placement drives securing internships and full-time roles for 100+ students." },
-        { title: "Core Team Member", sub: "The Hackers Meetup, Nagpur · 2023 – Present", desc: "Organise technical workshops, hackathons, and cybersecurity talks across Nagpur's dev community." },
+        { title: "President - Student Placement Cell", sub: "PBCOE • 2022 - 2023", desc: "Led placement drives securing internships and full-time roles for 100+ students." },
+        { title: "Core Team Member", sub: "The Hackers Meetup, Nagpur • 2023 - Present", desc: "Organise technical workshops, hackathons, and cybersecurity talks across Nagpur's dev community." },
       ],
     },
   ],
@@ -87,13 +179,13 @@ const About = () => {
   return (
     <div className="min-h-[100dvh] bg-primary relative z-10 w-full overflow-x-hidden">
 
-      {/* — Background aura — */}
+      {/* ── Background aura ── */}
       <motion.div
         animate={{ scale: [1, 1.2, 1], opacity: [0.25, 0.45, 0.25], x: [0, 20, 0], y: [0, -20, 0] }}
         transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
         className="fixed top-0 right-0 w-[50vw] h-[50vw] max-w-[700px] max-h-[700px] bg-cyan-600/40 blur-[120px] rounded-full pointer-events-none -z-10 translate-x-1/3 -translate-y-1/3"
       />
-      {/* — Cyber grid — */}
+      {/* ── Cyber grid ── */}
       <div className="fixed inset-0 opacity-10 pointer-events-none -z-20" style={{
         backgroundImage: `linear-gradient(#4b3792 1px, transparent 1px), linear-gradient(90deg, #4b3792 1px, transparent 1px)`,
         backgroundSize: "80px 80px",
@@ -101,10 +193,10 @@ const About = () => {
 
       <Circles />
 
-      {/* ═══ Main shell ═══════════════════════════════════════════════════════ */}
+      {/* ─── Main shell ─────────────────────────────────────────────────────── */}
       <div className="flex w-full xl:h-screen">
 
-        {/* ── LEFT SIDEBAR (30%) — desktop only ─────────────────────────────── */}
+        {/* ── LEFT SIDEBAR (30%) — desktop only ────────────────────────────── */}
         <motion.aside
           variants={fadeIn("right", 0.15)}
           initial="hidden"
@@ -145,7 +237,7 @@ const About = () => {
           </div>
         </motion.aside>
 
-        {/* ── RIGHT CONTENT PANE ────────────────────────────────────────────── */}
+        {/* ── RIGHT CONTENT PANE ───────────────────────────────────────────── */}
         {/* Desktop: full-height fixed. Mobile: scrollable with top/bottom padding for header+nav */}
         <div className="flex-1 pt-20 xl:pt-24 pb-28 xl:pb-8 px-5 xl:pr-12 xl:pl-10 xl:h-screen xl:overflow-hidden">
           <AnimatePresence mode="wait">
@@ -154,14 +246,19 @@ const About = () => {
               <motion.div key="bio" variants={paneVariants} initial="initial" animate="animate" exit="exit"
                 className="flex flex-col justify-start xl:justify-center xl:h-full max-w-3xl"
               >
+                <div className="text-accent font-mono text-xs uppercase tracking-[3px] mb-2">
+                  {"// 01 Lead Full-Stack & AI Systems Engineer"}
+                </div>
                 <h2 className="text-3xl xl:text-6xl font-semibold mb-6">
                   Who am I<span className="text-accent">?</span>
                 </h2>
-                <p className="text-white/70 leading-[1.9] text-sm xl:text-lg mb-10 max-w-2xl">
-                  {aboutData.bio.bio}
-                </p>
+                <div className="space-y-4 text-white/75 leading-[1.8] text-sm xl:text-base mb-8 max-w-2xl">
+                  {aboutData.bio.paragraphs.map((p, idx) => (
+                    <p key={idx}>{p}</p>
+                  ))}
+                </div>
                 {/* Stats */}
-                <div className="flex gap-x-8 xl:gap-x-12 pt-8 border-t border-white/10">
+                <div className="flex gap-x-8 xl:gap-x-12 pt-6 border-t border-white/10">
                   {aboutData.bio.stats.map((s, i) => (
                     <div key={i}>
                       <div className="text-3xl xl:text-5xl font-extrabold text-accent drop-shadow-[0_0_20px_rgba(241,48,36,0.4)]">
@@ -174,21 +271,24 @@ const About = () => {
               </motion.div>
             )}
 
-            {/* ── SKILLS ── */}
+            {/* ── SKILLS / TECH STACK ── */}
             {activeTab === "skills" && (
               <motion.div key="skills" variants={paneVariants} initial="initial" animate="animate" exit="exit"
-                className="flex flex-col xl:h-full xl:overflow-y-auto card-scroll"
+                className="flex flex-col xl:h-full xl:overflow-y-auto card-scroll pr-2"
               >
+                <div className="text-accent font-mono text-xs uppercase tracking-[3px] mb-2">
+                  {"// 02 Battle-Tested Architecture & Tooling"}
+                </div>
                 <h2 className="text-2xl xl:text-5xl font-semibold mb-8 shrink-0">
                   Tech <span className="text-accent">Stack</span>
                 </h2>
-                <div className="flex flex-col gap-y-8">
+                <div className="flex flex-col gap-y-7">
                   {aboutData.skills.map((cat, i) => (
                     <motion.div
                       key={i}
                       initial={{ opacity: 0, y: 15 }}
                       animate={{ opacity: 1, y: 0 }}
-                      transition={{ delay: i * 0.08, duration: 0.4 }}
+                      transition={{ delay: i * 0.06, duration: 0.4 }}
                     >
                       <div className="text-accent font-mono text-xs uppercase tracking-[3px] mb-3">
                         {"//"} {cat.category}
@@ -197,8 +297,8 @@ const About = () => {
                         {cat.items.map((item, j) => (
                           <motion.div
                             key={j}
-                            whileHover={{ scale: 1.06, borderColor: "rgba(241,48,36,0.6)" }}
-                            className="px-3 py-1.5 xl:px-4 xl:py-2 bg-white/5 border border-white/10 rounded-full text-xs xl:text-sm font-mono text-white/70 hover:text-white transition-colors cursor-default"
+                            whileHover={{ scale: 1.05, borderColor: "rgba(241,48,36,0.6)" }}
+                            className="px-3 py-1.5 xl:px-3.5 xl:py-2 bg-white/5 border border-white/10 rounded-full text-xs xl:text-sm font-mono text-white/70 hover:text-white transition-colors cursor-default"
                           >
                             {item}
                           </motion.div>
@@ -213,8 +313,11 @@ const About = () => {
             {/* ── EXPERIENCE ── */}
             {activeTab === "experience" && (
               <motion.div key="experience" variants={paneVariants} initial="initial" animate="animate" exit="exit"
-                className="flex flex-col xl:h-full xl:overflow-y-auto card-scroll"
+                className="flex flex-col xl:h-full xl:overflow-y-auto card-scroll pr-2"
               >
+                <div className="text-accent font-mono text-xs uppercase tracking-[3px] mb-2">
+                  {"// 03 Leadership & Career Timeline"}
+                </div>
                 <h2 className="text-2xl xl:text-5xl font-semibold mb-10 shrink-0">
                   Work <span className="text-accent">Experience</span>
                 </h2>
@@ -230,7 +333,20 @@ const About = () => {
                       <div className="absolute -left-[30px] top-1.5 w-3 h-3 rounded-full bg-accent shadow-[0_0_10px_rgba(241,48,36,0.7)] z-10" />
                       <div className="text-[11px] text-accent font-mono uppercase tracking-[2px] mb-2">{exp.stage}</div>
                       <h3 className="text-lg xl:text-2xl font-bold text-white mb-1">{exp.title}</h3>
-                      <div className="text-sm text-white/40 font-mono mb-3">{exp.company}</div>
+                      <div className="text-sm text-white/40 font-mono mb-3">
+                        {exp.companyUrl ? (
+                          <a
+                            href={exp.companyUrl}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-accent/90 hover:text-accent hover:underline inline-flex items-center gap-1"
+                          >
+                            {exp.company} ↗
+                          </a>
+                        ) : (
+                          exp.company
+                        )}
+                      </div>
                       <p className="text-white/60 text-sm leading-relaxed max-w-2xl">{exp.desc}</p>
                     </motion.div>
                   ))}
@@ -241,8 +357,11 @@ const About = () => {
             {/* ── BACKGROUND ── */}
             {activeTab === "background" && (
               <motion.div key="background" variants={paneVariants} initial="initial" animate="animate" exit="exit"
-                className="flex flex-col xl:h-full xl:overflow-y-auto card-scroll"
+                className="flex flex-col xl:h-full xl:overflow-y-auto card-scroll pr-2"
               >
+                <div className="text-accent font-mono text-xs uppercase tracking-[3px] mb-2">
+                  {"// 04 Foundations & Community"}
+                </div>
                 <h2 className="text-2xl xl:text-5xl font-semibold mb-10 shrink-0">
                   Background & <span className="text-accent">Impact</span>
                 </h2>
@@ -277,7 +396,7 @@ const About = () => {
         </div>
       </div>
 
-      {/* ── Mobile Tab Bar (stacked above bottom nav) ──────────────────────── */}
+      {/* ── Mobile Tab Bar (stacked above bottom nav) ── */}
       {/* z-40 sits above page content (z-10) but below nav (z-50). bottom-[88px] = nav height (80px) + gap */}
       <div className="xl:hidden fixed bottom-[88px] left-1/2 -translate-x-1/2 z-40 flex gap-2 bg-black/70 backdrop-blur-xl border border-white/10 rounded-2xl p-2 shadow-xl">
         {NAV.map((item) => (
