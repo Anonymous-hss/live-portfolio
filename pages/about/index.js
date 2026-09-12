@@ -87,11 +87,13 @@ const aboutData = {
     {
       category: "Cloud, DevOps & Infrastructure",
       items: [
+        "Azure (VMs, DNS Zones)",
         "Docker",
         "AWS (EC2, S3, CloudFront)",
+        "Nginx (Reverse Proxy & SSL)",
         "CI/CD GitHub Actions",
-        "Linux / Kali",
-        "Nginx",
+        "Linux / Ubuntu",
+        "Systemd",
         "Postman",
         "Jest",
         "Upstox API Gateway"
