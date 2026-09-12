@@ -13,14 +13,14 @@ const aboutData = {
     bio: "I am a results-driven Full-Stack Developer with over 2 years of experience engineering production-grade, AI-integrated applications. I specialize in designing scalable backend architectures, real-time systems, and multi-tenant platforms using React, Go, and Node.js. From scaling CRMs processing 10k+ leads monthly to architecting RAG-based platforms with LangChain and LangGraph, I own the entire development lifecycle — from schema design to deployment.",
     stats: [
       { value: 2, label: "Years Exp." },
-      { value: 15, label: "Projects" },
+      { value: 18, label: "Projects" },
       { value: 20, label: "Events" },
     ],
   },
   skills: [
-    { category: "Core & Frameworks", items: ["React.js", "Next.js", "React Native", "TypeScript", "JavaScript", "Vue.js", "HTML5", "CSS3"] },
+    { category: "Core & Frameworks", items: ["React.js", "Next.js", "React Native", "TypeScript", "JavaScript", "Vue.js", "Three.js", "HTML5", "CSS3"] },
     { category: "Backend & Databases", items: ["Node.js", "Go", "Express.js", "REST APIs", "WebSockets", "PostgreSQL", "MongoDB", "Redis", "MySQL", "Prisma"] },
-    { category: "AI / ML", items: ["LangChain", "LangGraph", "RAG", "FAISS", "Vector DBs", "Python", "Ollama"] },
+    { category: "AI / ML", items: ["LangChain", "LangGraph", "Agentic Workflows", "RAG", "FAISS", "Vector DBs", "Python", "Ollama"] },
     { category: "DevOps & Tools", items: ["Docker", "AWS", "Git", "GitHub", "CI/CD", "Jest", "Postman", "Linux/Kali"] },
     { category: "Design", items: ["Figma", "Tailwind CSS", "Framer Motion", "Glassmorphism"] },
   ],
