@@ -1,12 +1,12 @@
-// icons
+﻿// icons
 import {
   HiHome,
   HiUser,
-  HiViewColumns,
-  HiRectangleGroup,
-  HiChatBubbleBottomCenterText,
-  HiEnvelope,
-} from "react-icons/hi2";
+  HiViewGrid,
+  HiCollection,
+  HiChatAlt2,
+  HiMail,
+} from "react-icons/hi";
 
 // nav data
 export const navData = [
@@ -27,7 +27,6 @@ export const navData = [
 ];
 
 import Link from "next/link";
-
 import { useRouter } from "next/router";
 
 const Nav = () => {
