@@ -20,7 +20,7 @@ export const projectData = [
     ],
     "image": "/Projects/stockgenius.png",
     "featured": true,
-    "role": "Lead Full-Stack & Systems Engineer / Engineering Lead: Architected end-to-end microservices, real-time WebSocket broker fan-out bridge, Azure OpenAI tool-calling agent with SSE streaming, and concurrency-safe paper trading terminal.",
+    "role": "Full Stack AI Engineer (Project Lead): Architected end-to-end microservices, real-time WebSocket broker fan-out bridge, Azure OpenAI tool-calling agent with SSE streaming, and concurrency-safe paper trading terminal.",
     "outcome": "Delivered sub-50ms tick-to-client streaming, cut upstream broker API rate-limit overhead by 85% via reference-counted dynamic subscription pooling, eliminated race conditions during burst volatility, and shipped installable PWA & Android builds.",
     "verification": "Live production platform accessible at stockgenius.ai with active users across Indian and US equity markets.",
     "proofLinks": [
@@ -57,7 +57,7 @@ export const projectData = [
     ],
     "image": "/Projects/dataglow.png",
     "featured": true,
-    "role": "Project Lead & Lead AI / Data Systems Architect: Spearheaded the end-to-end design and delivery of the 3-Layer Scoring Engine, Meridian predictive drift layer, and live event-driven CDC self-healing architecture.",
+    "role": "Full Stack AI Engineer (Project Lead): Spearheaded the end-to-end design and delivery of the 3-Layer Scoring Engine, Meridian predictive drift layer, and live event-driven CDC self-healing architecture.",
     "outcome": "Eliminated metric hallucination via mathematical determinism + LangGraph arbitration, forecasted quality breaches days in advance with financial dollar-risk impact modeling, and automated lakehouse remediation with Redis queues, cutting incident MTTR from hours to seconds.",
     "verification": "Live enterprise platform at dataglow.ai and enterprise architecture documentation.",
     "proofLinks": [
@@ -422,7 +422,7 @@ export const projectData = [
     ],
     "image": "/Projects/logo-reborn.webp",
     "featured": true,
-    "role": "Engineered internal CRM flows for lead intake, branch visibility, reporting, and operator response across clinic teams.",
+    "role": "Technical Head – Full Stack Development: Headed technical development and system architecture for the clinic's internal lead engine. Engineered real-time intake pipelines connecting Meta & Google Ads APIs to multi-branch operational dashboards, automated triage, and reporting.",
     "outcome": "Moved lead handling closer to real time and helped centralize acquisition and follow-up into a single internal system.",
     "verification": "This is internal product work, so the code is private. The strongest external proof is the associated business and the CRM screenshots shown in the portfolio.",
     "proofLinks": [

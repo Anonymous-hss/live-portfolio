@@ -9,9 +9,9 @@ import CountUp from "react-countup";
 const aboutData = {
   bio: {
     heading: "Who am I?",
-    bio: "I am a Lead Full-Stack & AI Systems Engineer with over 2 years of experience leading engineering teams and architecting mission-critical, production-grade applications. At Aavilabs (aavilabs.com), I head the engineering and architecture teams building institutional FinTech and enterprise AI flagships — notably StockGenius AI (stockgenius.ai), a high-frequency multi-market trading copilot with sub-50ms WebSocket streaming and broker fan-out gateways, and DataGlow (dataglow.ai), an enterprise AI data governance platform featuring a deterministic 3-layer scoring engine and automated lakehouse remediation. From scaling CRMs handling 10k+ leads monthly to deploying agentic state machines with LangGraph, I own the entire lifecycle from architecture to production.",
+    bio: "I am a Full Stack AI Engineer with over 2 years of experience leading engineering teams and architecting mission-critical, production-grade applications. At Aavilabs (aavilabs.com), I head the engineering and architecture teams building institutional FinTech and enterprise AI flagships — notably StockGenius AI (stockgenius.ai), a high-frequency multi-market trading copilot with sub-50ms WebSocket streaming and broker fan-out gateways, and DataGlow (dataglow.ai), an enterprise AI data governance platform featuring a deterministic 3-layer scoring engine and automated lakehouse remediation. From scaling CRMs handling 10k+ leads monthly to deploying agentic state machines with LangGraph, I own the entire lifecycle from architecture to production.",
     paragraphs: [
-      "I am a results-driven Lead Full-Stack & AI Systems Engineer with over 2 years of experience leading engineering teams and architecting mission-critical, production-grade applications. At Aavilabs, I head the engineering and architecture teams building institutional FinTech and enterprise AI flagships — including StockGenius AI (high-frequency multi-market trading platform with sub-50ms WebSocket streaming and Upstox broker bridges) and DataGlow (enterprise AI data quality platform with a deterministic 3-layer scoring engine and automated lakehouse remediation).",
+      "I am a results-driven Full Stack AI Engineer with over 2 years of experience leading engineering teams and architecting mission-critical, production-grade applications. At Aavilabs, I head the engineering and architecture teams building institutional FinTech and enterprise AI flagships — including StockGenius AI (high-frequency multi-market trading platform with sub-50ms WebSocket streaming and Upstox broker bridges) and DataGlow (enterprise AI data quality platform with a deterministic 3-layer scoring engine and automated lakehouse remediation).",
       "My specialization spans high-concurrency real-time distributed systems, multi-agent AI workflows (LangGraph, LangChain), and scalable multi-tenant platforms using React, Python, Go, and Node.js. Whether eliminating metric hallucinations via mathematical determinism, designing race-condition-free financial ledgers, streaming neural voice companions with zero latency, or scaling clinic CRMs processing 10k+ monthly leads, I own the entire lifecycle from low-level dataflow design to high-availability production.",
       "With 20 shipped production products, public open-source architectures, and active leadership across developer communities, I engineer systems that combine state-of-the-art AI intelligence with uncompromising reliability, mathematical rigor, and ultra-fluid user experience."
     ],
@@ -111,7 +111,7 @@ const aboutData = {
   ],
   experience: [
     {
-      title: "Lead Full-Stack & AI Systems Engineer",
+      title: "Full Stack AI Engineer",
       company: "Aavilabs",
       companyUrl: "https://aavilabs.com/",
       stage: "2025 - Present",
@@ -124,10 +124,11 @@ const aboutData = {
       desc: "Developing enterprise-grade, multi-tenant platforms and internal tooling. Working with React, Go microservices, and PostgreSQL to build production-ready, scalable systems.",
     },
     {
-      title: "Full-Stack Developer",
-      company: "Reborn Skin & Hair Clinics",
+      title: "Technical Head – Full Stack Development",
+      company: "REBORN SKIN INTERNATIONAL CLINICS PVT LTD",
+      companyUrl: "https://www.linkedin.com/company/106707403/",
       stage: "2024 - 2025",
-      desc: "Engineered a production CRM platform processing 10k+ leads/month. Built real-time notification systems, multi-branch reporting dashboards, and automated patient flow pipelines.",
+      desc: "Headed full-stack technical development and core system architecture for clinical operations. Architected and scaled a production CRM platform processing 10k+ leads/month, real-time multi-branch communication pipelines, notification engines, and automated patient conversion flows.",
     },
     {
       title: "Web Development Intern",
@@ -247,7 +248,7 @@ const About = () => {
                 className="flex flex-col justify-start xl:justify-center xl:h-full max-w-3xl"
               >
                 <div className="text-accent font-mono text-xs uppercase tracking-[3px] mb-2">
-                  {"// 01 Lead Full-Stack & AI Systems Engineer"}
+                  {"// 01 Full Stack AI Engineer"}
                 </div>
                 <h2 className="text-3xl xl:text-6xl font-semibold mb-6">
                   Who am I<span className="text-accent">?</span>
