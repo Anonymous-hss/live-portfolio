@@ -53,7 +53,7 @@ const proofCards = [
     description:
       "The resume is available directly on the site, and references can be shared on request for serious opportunities.",
     badge: "Resume",
-    href: "/harshal-sawatkar-resume.pdf",
+    href: "https://drive.google.com/file/d/1Ps8dVkG7IX6aT9XsaQjJ6P-VFRZ6hbca/view?usp=sharing",
     hrefLabel: "Open resume",
     glowColor: "35 85 60",
     colors: ["#fbbf24", "#f59e0b", "#f97316"],
@@ -69,7 +69,7 @@ const stats = [
 
 const quickLinks = [
   { label: "Projects", href: "/projects" },
-  { label: "Resume", href: "/harshal-sawatkar-resume.pdf" },
+  { label: "Resume", href: "https://drive.google.com/file/d/1Ps8dVkG7IX6aT9XsaQjJ6P-VFRZ6hbca/view?usp=sharing" },
   { label: "GitHub", href: "https://github.com/Anonymous-hss" },
   { label: "LinkedIn", href: "https://www.linkedin.com/in/harshal-sawatkar/" },
 ];

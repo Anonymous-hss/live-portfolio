@@ -18,14 +18,14 @@ const RANDOM_DIALOGUES = {
   "/": [
     "Hey! I'm Aaryx. I know everything.",
     "Still scrolling? Just ask me directly.",
-    "Looking for a dev? You found one.",
+    "Looking for an AI & distributed backend engineer? You found one.",
     "20+ shipped products. Want the highlights?",
     "He built me. Imagine what he'll build for you.",
     "AI, Go, React, Node - pick your weapon.",
     "I dare you to quiz me on Harshal.",
     "His CRM handles 10k+ leads/month. Casually.",
     "Need the resume? Just say the word.",
-    "Full-stack, AI, mobile - he ships it all.",
+    "Distributed backends, real-time AI - he ships it all.",
   ],
   "/about": [
     "Already reading the bio? Smart move.",

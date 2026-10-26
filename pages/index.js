@@ -72,7 +72,7 @@ const Home = () => {
               respectReducedMotion={true}
               loop={false}
               loopDelay={0}
-              className="text-accent text-[0.8rem] sm:text-xl md:text-3xl mt-4 xl:mt-2 block"
+              className="text-accent text-[0.65rem] sm:text-[0.85rem] md:text-sm lg:text-[15px] xl:text-[1.12rem] mt-3 xl:mt-2.5 block tracking-wider leading-relaxed lg:whitespace-nowrap"
             />
           </motion.h2>
 
@@ -81,7 +81,7 @@ const Home = () => {
             initial="hidden"
             animate="show"
             exit="hidden"
-            className="max-w-sm md:max-w-2xl lg:max-w-xl mx-auto lg:mx-0 mb-8 text-sm sm:text-base leading-relaxed text-white/80"
+            className="max-w-sm md:max-w-2xl lg:max-w-2xl mx-auto lg:mx-0 mb-8 text-sm sm:text-base leading-relaxed text-white/80"
           >
             I architect and engineer mission-critical AI systems, high-concurrency distributed backends, and real-time streaming platforms.{" "}
             Over the last{" "}
@@ -127,7 +127,7 @@ const Home = () => {
             <Link href="/testimonials" className="hover:text-accent transition-colors">
               Proof of work
             </Link>
-            <Link href="/harshal-sawatkar-resume.pdf" target="_blank" rel="noreferrer" className="hover:text-accent transition-colors">
+            <Link href="https://drive.google.com/file/d/1Ps8dVkG7IX6aT9XsaQjJ6P-VFRZ6hbca/view?usp=sharing" target="_blank" rel="noreferrer" className="hover:text-accent transition-colors">
               Resume
             </Link>
             <Link href="https://github.com/Anonymous-hss" target="_blank" rel="noreferrer" className="hover:text-accent transition-colors">
