@@ -9,9 +9,9 @@ import { AnimatePresence, motion } from "framer-motion";
 
 const pageMeta = {
   "/": {
-    title: "Harshal Sawatkar | Full Stack Developer",
+    title: "Harshal Sawatkar | AI Systems & Distributed Backend Engineer",
     description:
-      "Full stack developer building production web, mobile, CRM, and AI products with React, Next.js, Go, Node.js, and practical product ownership.",
+      "AI Systems & Distributed Backend Engineer architecting high-throughput distributed backends, real-time streaming engines, and autonomous AI systems.",
   },
   "/about": {
     title: "About | Harshal Sawatkar",

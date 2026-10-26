@@ -20,7 +20,7 @@ export const projectData = [
     ],
     "image": "/Projects/stockgenius.png",
     "featured": true,
-    "role": "Full Stack AI Engineer (Project Lead): Architected end-to-end microservices, real-time WebSocket broker fan-out bridge, Azure OpenAI tool-calling agent with SSE streaming, and concurrency-safe paper trading terminal.",
+    "role": "AI Systems & Distributed Backend Engineer (Project Lead): Architected end-to-end microservices, real-time WebSocket broker fan-out bridge, Azure OpenAI tool-calling agent with SSE streaming, and concurrency-safe paper trading terminal.",
     "outcome": "Delivered sub-50ms tick-to-client streaming, cut upstream broker API rate-limit overhead by 85% via reference-counted dynamic subscription pooling, eliminated race conditions during burst volatility, and shipped installable PWA & Android builds.",
     "verification": "Live production platform accessible at stockgenius.ai with active users across Indian and US equity markets.",
     "proofLinks": [
@@ -57,7 +57,7 @@ export const projectData = [
     ],
     "image": "/Projects/dataglow.png",
     "featured": true,
-    "role": "Full Stack AI Engineer (Project Lead): Spearheaded the end-to-end design and delivery of the 3-Layer Scoring Engine, Meridian predictive drift layer, and live event-driven CDC self-healing architecture.",
+    "role": "AI Systems & Distributed Backend Engineer (Project Lead): Spearheaded the end-to-end design and delivery of the 3-Layer Scoring Engine, Meridian predictive drift layer, and live event-driven CDC self-healing architecture.",
     "outcome": "Eliminated metric hallucination via mathematical determinism + LangGraph arbitration, forecasted quality breaches days in advance with financial dollar-risk impact modeling, and automated lakehouse remediation with Redis queues, cutting incident MTTR from hours to seconds.",
     "verification": "Live enterprise platform at dataglow.ai and enterprise architecture documentation.",
     "proofLinks": [

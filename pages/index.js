@@ -23,7 +23,7 @@ const proofPoints = [
   "20 shipped products",
   "Public repos + live products",
   "Private work explained clearly",
-  "Full stack + AI delivery",
+  "AI Systems & Distributed Delivery",
 ];
 
 const Home = () => {
@@ -59,7 +59,7 @@ const Home = () => {
               className="text-white text-[1.2rem] sm:text-3xl md:text-5xl mb-4 md:mb-0"
             />
             <Shuffle
-              text="Full Stack Developer"
+              text="AI Systems & Distributed Backend Engineer"
               shuffleDirection="right"
               duration={0.35}
               animationMode="evenodd"
@@ -83,9 +83,21 @@ const Home = () => {
             exit="hidden"
             className="max-w-sm md:max-w-2xl lg:max-w-xl mx-auto lg:mx-0 mb-8 text-sm sm:text-base leading-relaxed text-white/80"
           >
-            I build product-ready web, mobile, CRM, and AI systems for teams that need clean execution and reliable delivery.
-            Over the last <ShinyText speed={2} spread={100} color="#94a3b8" shineColor="#ffffff" className="font-semibold">2+ years</ShinyText>, I have shipped live ecommerce experiences, internal CRMs handling <ShinyText speed={2} spread={110} color="#94a3b8" shineColor="#ffffff" className="font-semibold">10,000+ leads per month</ShinyText>, real-time products, and public AI tools.
-            This portfolio is structured around proof: shipped work, public repos where possible, and clear case-study notes for private client systems.
+            I architect and engineer mission-critical AI systems, high-concurrency distributed backends, and real-time streaming platforms.{" "}
+            Over the last{" "}
+            <ShinyText speed={2} spread={100} color="#94a3b8" shineColor="#ffffff" className="font-semibold">
+              2+ years
+            </ShinyText>
+            , I have led engineering for institutional FinTech platforms with{" "}
+            <ShinyText speed={2} spread={110} color="#94a3b8" shineColor="#ffffff" className="font-semibold">
+              sub-50ms WebSocket streaming
+            </ShinyText>
+            , enterprise AI data lakehouse engines, and production CRMs handling{" "}
+            <ShinyText speed={2} spread={110} color="#94a3b8" shineColor="#ffffff" className="font-semibold">
+              10,000+ leads per month
+            </ShinyText>
+            .{" "}
+            This portfolio is structured around proof: shipped production systems, public repos where possible, and verified architectural designs.
           </motion.p>
 
           <motion.div

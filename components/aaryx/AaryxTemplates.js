@@ -19,7 +19,7 @@ export const defaultTemplates = [
   {
     icon: "💼",
     title: "Why Hire Him?",
-    msg: "Why should we hire Harshal for a full-stack role?",
+    msg: "Why should we hire Harshal for an AI & distributed backend role?",
   },
   {
     icon: "🤖",
