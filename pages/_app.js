@@ -62,6 +62,9 @@ function MyApp({ Component, pageProps }) {
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={currentMeta.title} />
         <meta name="twitter:description" content={currentMeta.description} />
+        <link rel="icon" href="/favicon.ico" sizes="any" />
+        <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
         {canonicalUrl && <link rel="canonical" href={canonicalUrl} />}
         {canonicalUrl && <meta property="og:url" content={canonicalUrl} />}
         {imageUrl && <meta property="og:image" content={imageUrl} />}
