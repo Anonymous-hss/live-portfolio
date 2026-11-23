@@ -38,7 +38,7 @@ const contactInfo = [
 
 const socials = [
   { icon: <RiLinkedinLine />, href: "https://www.linkedin.com/in/harshal-sawatkar/", label: "LinkedIn" },
-  { icon: <RiGithubLine />, href: "https://github.com/Anonymous-hss", label: "GitHub" },
+  { icon: <RiGithubLine />, href: "https://github.com/harshalsawatkar", label: "GitHub" },
   { icon: <RiTwitterLine />, href: "https://twitter.com/HarshalSawatkar", label: "Twitter" },
 ];
 

@@ -22,7 +22,7 @@ const Socials = () => {
       </Link>
 
       <Link
-        href={"https://github.com/Anonymous-hss"}
+        href={"https://github.com/harshalsawatkar"}
         target="_blank"
         rel="noreferrer"
         aria-label="Open GitHub profile"

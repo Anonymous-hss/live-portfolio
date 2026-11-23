@@ -6,7 +6,7 @@ const workSlides = {
         {
           title: "Ai-SaaS",
           path: "/tumbnew.png",
-          href: "https://github.com/Anonymous-hss/Ai-SaaS",
+          href: "https://github.com/harshalsawatkar/Ai-SaaS",
         },
         {
           title: "Ai-SaaS",
@@ -16,12 +16,12 @@ const workSlides = {
         {
           title: "Fashion Recommendation Engine",
           path: "/thumb1.png",
-          href: "https://github.com/Anonymous-hss/Fashion-Recommendation-Engine-Updated",
+          href: "https://github.com/harshalsawatkar/Fashion-Recommendation-Engine-Updated",
         },
         {
           title: "Fashion Recommendation Chatbot",
           path: "/thumb2.png",
-          href: "https://github.com/Anonymous-hss/Fashion-Recommendation-Chatbot",
+          href: "https://github.com/harshalsawatkar/Fashion-Recommendation-Chatbot",
         },
       ],
     },
@@ -30,22 +30,22 @@ const workSlides = {
         {
           title: "Designer Portfolio",
           path: "/thumb31.jpg",
-          href: "https://anonymous-hss.github.io/Portfolio-website/",
+          href: "https://harshalsawatkar.github.io/Portfolio-website/",
         },
         {
           title: "Amazon Clone",
           path: "/thumb5.png",
-          href: "https://github.com/Anonymous-hss/amazon-clone-new",
+          href: "https://github.com/harshalsawatkar/amazon-clone-new",
         },
         {
           title: "UbTech",
           path: "/thumb6.png",
-          href: "https://github.com/Anonymous-hss/Ubtech",
+          href: "https://github.com/harshalsawatkar/Ubtech",
         },
         {
           title: "AR-VR Try-on",
           path: "/thumb41.jpg",
-          href: "https://github.com/Anonymous-hss/AR-VR-TRY-ON",
+          href: "https://github.com/harshalsawatkar/AR-VR-TRY-ON",
         },
       ],
     },
@@ -54,7 +54,7 @@ const workSlides = {
         {
           title: "FundMe Smartcontract",
           path: "/thumb8.png",
-          href: "https://github.com/Anonymous-hss/Fund-me-smart-contract-",
+          href: "https://github.com/harshalsawatkar/Fund-me-smart-contract-",
         },
       ],
     },

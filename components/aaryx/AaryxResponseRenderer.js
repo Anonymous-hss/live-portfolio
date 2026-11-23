@@ -26,7 +26,7 @@ function ContactCard() {
       </div>
       <div className="flex gap-2 mt-3 pt-3 border-t border-white/5">
         <a href="https://www.linkedin.com/in/harshal-sawatkar/" target="_blank" rel="noreferrer" className="px-2 py-1 bg-white/5 hover:bg-white/10 rounded text-[10px] text-white/70 transition-colors">LinkedIn ↗</a>
-        <a href="https://github.com/Anonymous-hss" target="_blank" rel="noreferrer" className="px-2 py-1 bg-white/5 hover:bg-white/10 rounded text-[10px] text-white/70 transition-colors">GitHub ↗</a>
+        <a href="https://github.com/harshalsawatkar" target="_blank" rel="noreferrer" className="px-2 py-1 bg-white/5 hover:bg-white/10 rounded text-[10px] text-white/70 transition-colors">GitHub ↗</a>
         <a href="https://twitter.com/HarshalSawatkar" target="_blank" rel="noreferrer" className="px-2 py-1 bg-white/5 hover:bg-white/10 rounded text-[10px] text-white/70 transition-colors">X ↗</a>
       </div>
     </div>
@@ -91,7 +91,7 @@ function ResumeCTA() {
     <div className="my-2 p-3 bg-gradient-to-r from-purple-900/40 to-indigo-900/40 border border-purple-500/30 rounded-xl text-center">
       <p className="text-[10px] uppercase tracking-widest text-purple-200/60 mb-1 font-semibold">📄 Resume</p>
       <p className="text-xs text-white mb-2">AI Systems & Distributed Backend · 2+ yrs · 20+ ships</p>
-      <a href="https://drive.google.com/file/d/1Ps8dVkG7IX6aT9XsaQjJ6P-VFRZ6hbca/view?usp=sharing" target="_blank" rel="noreferrer" className="inline-block px-4 py-1.5 bg-purple-500 hover:bg-purple-400 text-white text-[10px] font-bold uppercase tracking-wider rounded-lg transition-colors">
+      <a href="/Harshal_Sawatkar_Resume.pdf" target="_blank" rel="noreferrer" className="inline-block px-4 py-1.5 bg-purple-500 hover:bg-purple-400 text-white text-[10px] font-bold uppercase tracking-wider rounded-lg transition-colors">
         Download Resume ↓
       </a>
     </div>

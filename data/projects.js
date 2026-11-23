@@ -100,11 +100,11 @@ export const projectData = [
       },
       {
         "label": "GitHub repo",
-        "href": "https://github.com/Anonymous-hss/ace-"
+        "href": "https://github.com/harshalsawatkar/ace-"
       }
     ],
     "links": {
-      "github": "https://github.com/Anonymous-hss/ace-",
+      "github": "https://github.com/harshalsawatkar/ace-",
       "live": "https://ace.stealthgrowth.in",
       "details": true
     }
@@ -133,11 +133,43 @@ export const projectData = [
     "proofLinks": [
       {
         "label": "GitHub repo",
-        "href": "https://github.com/Anonymous-hss/dc2"
+        "href": "https://github.com/harshalsawatkar/dc2"
       }
     ],
     "links": {
-      "github": "https://github.com/Anonymous-hss/dc2",
+      "github": "https://github.com/harshalsawatkar/dc2",
+      "live": null,
+      "details": true
+    }
+  },
+  {
+    "id": 21,
+    "title": "Deskhand (Sandboxed Computer-Use Agent)",
+    "category": "AI",
+    "tagline": "Sandboxed Playwright browser agent host with 150-call disk budget & iOS FaceID HITL gates.",
+    "description": "An autonomous computer-use AI teammate running a sandboxed Playwright browser host on Windows with DOM/vision action loops, strict domain allowlisting, hard disk-backed 150-call budget guards, an emergency OS kill switch (Ctrl+Shift+K), and a native Swift 6 / SwiftUI iOS companion app for 1-tap FaceID safety approvals.",
+    "stack": [
+      "TypeScript",
+      "Playwright",
+      "Node.js",
+      "Vision/DOM Loop",
+      "Swift 6",
+      "SwiftUI",
+      "WebSockets"
+    ],
+    "image": "/Projects/ghost-agent.jpg",
+    "featured": true,
+    "role": "Architected the sandboxed Playwright agent host, hard 150-call disk budget counter, domain allowlist perimeter, global emergency kill switch, and iOS FaceID approval bridge.",
+    "outcome": "Automated legacy web admin and portal workflows with zero API access while enforcing strict cost containment (auto-halting at 150 calls or HTTP 429) and sub-10-second biometric human approval gates.",
+    "verification": "Monorepo architecture spanning Windows agent host, operator studio, and native SwiftUI mobile companion.",
+    "proofLinks": [
+      {
+        "label": "GitHub profile",
+        "href": "https://github.com/harshalsawatkar"
+      }
+    ],
+    "links": {
+      "github": "https://github.com/harshalsawatkar",
       "live": null,
       "details": true
     }
@@ -484,11 +516,11 @@ export const projectData = [
     "proofLinks": [
       {
         "label": "GitHub repo",
-        "href": "https://github.com/Anonymous-hss/Vapi-CRM"
+        "href": "https://github.com/harshalsawatkar/Vapi-CRM"
       }
     ],
     "links": {
-      "github": "https://github.com/Anonymous-hss/Vapi-CRM",
+      "github": "https://github.com/harshalsawatkar/Vapi-CRM",
       "live": null,
       "details": true
     }
@@ -513,11 +545,11 @@ export const projectData = [
     "proofLinks": [
       {
         "label": "GitHub repo",
-        "href": "https://github.com/Anonymous-hss/local-mind"
+        "href": "https://github.com/harshalsawatkar/local-mind"
       }
     ],
     "links": {
-      "github": "https://github.com/Anonymous-hss/local-mind",
+      "github": "https://github.com/harshalsawatkar/local-mind",
       "live": null,
       "details": true
     }
@@ -543,17 +575,17 @@ export const projectData = [
     "proofLinks": [
       {
         "label": "Server repo",
-        "href": "https://github.com/Anonymous-hss/ai-mascot-server"
+        "href": "https://github.com/harshalsawatkar/ai-mascot-server"
       },
       {
         "label": "Client repo",
-        "href": "https://github.com/Anonymous-hss/ai-mascot-client"
+        "href": "https://github.com/harshalsawatkar/ai-mascot-client"
       }
     ],
     "links": {
       "github": [
-        "https://github.com/Anonymous-hss/ai-mascot-server",
-        "https://github.com/Anonymous-hss/ai-mascot-client"
+        "https://github.com/harshalsawatkar/ai-mascot-server",
+        "https://github.com/harshalsawatkar/ai-mascot-client"
       ],
       "live": null,
       "details": true
@@ -585,11 +617,11 @@ export const projectData = [
     "proofLinks": [
       {
         "label": "GitHub repo",
-        "href": "https://github.com/Anonymous-hss/astra.ai"
+        "href": "https://github.com/harshalsawatkar/astra.ai"
       }
     ],
     "links": {
-      "github": "https://github.com/Anonymous-hss/astra.ai",
+      "github": "https://github.com/harshalsawatkar/astra.ai",
       "live": null,
       "details": true
     }
@@ -618,11 +650,11 @@ export const projectData = [
     "proofLinks": [
       {
         "label": "GitHub repo",
-        "href": "https://github.com/Anonymous-hss/Aaryx"
+        "href": "https://github.com/harshalsawatkar/Aaryx"
       }
     ],
     "links": {
-      "github": "https://github.com/Anonymous-hss/Aaryx",
+      "github": "https://github.com/harshalsawatkar/Aaryx",
       "live": null,
       "details": true
     }

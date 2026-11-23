@@ -42,7 +42,7 @@ const proofCards = [
     description:
       "Public repositories are linked for the AI and CRM products that can be reviewed in the open, so technical reviewers can inspect implementation quality.",
     badge: "GitHub",
-    href: "https://github.com/Anonymous-hss",
+    href: "https://github.com/harshalsawatkar",
     hrefLabel: "Open GitHub",
     glowColor: "280 70 70",
     colors: ["#a78bfa", "#c084fc", "#f472b6"],
@@ -53,7 +53,7 @@ const proofCards = [
     description:
       "The resume is available directly on the site, and references can be shared on request for serious opportunities.",
     badge: "Resume",
-    href: "https://drive.google.com/file/d/1Ps8dVkG7IX6aT9XsaQjJ6P-VFRZ6hbca/view?usp=sharing",
+    href: "/Harshal_Sawatkar_Resume.pdf",
     hrefLabel: "Open resume",
     glowColor: "35 85 60",
     colors: ["#fbbf24", "#f59e0b", "#f97316"],
@@ -69,8 +69,8 @@ const stats = [
 
 const quickLinks = [
   { label: "Projects", href: "/projects" },
-  { label: "Resume", href: "https://drive.google.com/file/d/1Ps8dVkG7IX6aT9XsaQjJ6P-VFRZ6hbca/view?usp=sharing" },
-  { label: "GitHub", href: "https://github.com/Anonymous-hss" },
+  { label: "Resume", href: "/Harshal_Sawatkar_Resume.pdf" },
+  { label: "GitHub", href: "https://github.com/harshalsawatkar" },
   { label: "LinkedIn", href: "https://www.linkedin.com/in/harshal-sawatkar/" },
 ];
 

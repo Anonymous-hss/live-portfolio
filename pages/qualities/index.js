@@ -32,7 +32,7 @@ const qualityData = [
     title: "AI Product Work",
     description:
       "Built practical AI products with LangChain-style workflows, typed web stacks, local model integrations, and agent-oriented product design.",
-    proof: "https://github.com/Anonymous-hss/local-mind",
+    proof: "https://github.com/harshalsawatkar/local-mind",
     proofLabel: "Local Mind repo",
     proofContext: "Public codebase for a local-first AI coding assistant.",
     glowColor: "280 70 70",

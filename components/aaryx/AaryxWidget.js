@@ -366,9 +366,11 @@ export default function AaryxWidget() {
     setMessages((prev) => [...prev, userMsg]);
 
     try {
-      // Direct call to Render backend (bypasses Vercel Serverless Function 10s timeout limit)
-      const baseUrl = process.env.NEXT_PUBLIC_AARYX_BACKEND_URL || "https://aaryx-backend.onrender.com";
-      const fetchUrl = `${baseUrl}/portfolio_chat_stream/${encodeURIComponent(textToSend)}`;
+      // Call built-in Next.js Gemini/Knowledge SSE endpoint (or custom backend if configured)
+      const baseUrl = process.env.NEXT_PUBLIC_AARYX_BACKEND_URL;
+      const fetchUrl = baseUrl
+        ? `${baseUrl}/portfolio_chat_stream/${encodeURIComponent(textToSend)}`
+        : `/api/aaryx?message=${encodeURIComponent(textToSend)}`;
       console.log("[Aaryx Debug] Sending request to:", fetchUrl);
       
       const res = await fetch(fetchUrl, {
